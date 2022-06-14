@@ -6,6 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="d55a8382-469e-4cce-8fd3-4dfec3886aa2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pageObject/AddEditModal.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pageObject/AddEditModal.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pageObject/login.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pageObject/Login.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pageObject/postMeeting.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pageObject/PostMeeting.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playwright-report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/playwright-report/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -92,7 +97,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9af70bcf-d324-4f98-9300-01be611d8740" name="Changes" comment="" />
+      <changelist id="d55a8382-469e-4cce-8fd3-4dfec3886aa2" name="Changes" comment="" />
       <created>1654263878956</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -111,6 +116,7 @@
       <workItem from="1655221521762" duration="203000" />
       <workItem from="1655221742600" duration="232000" />
       <workItem from="1655221977846" duration="379000" />
+      <workItem from="1655239896335" duration="6441000" />
     </task>
     <servers />
   </component>

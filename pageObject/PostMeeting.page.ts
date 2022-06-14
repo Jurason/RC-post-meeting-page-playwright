@@ -28,39 +28,39 @@ export class PostMeetingPage {
 
         //Tabs
         public get summaryTab() {
-            return this.tabs.locator("*****")
+            return this.tabs.locator("label[for='summaries']")
         }
 
         public get transcriptTab() {
-            return this.tabs.locator("*****")
+            return this.tabs.locator("label[for='transcript']")
         }
 
         public get highlightTab() {
-            return this.tabs.locator("*****")
+            return this.tabs.locator("label[for='highlight']")
         }
 
         public get participantsTab() {
-            return this.tabs.locator("*****")
+            return this.tabs.locator("label[for='participants']")
         }
 
             //Containers inside Summary Tab
-            readonly briefSummaryContainer = this.summaryTab.locator("****");
-            readonly keywordsContainer = this.summaryTab.locator("****");
-            readonly summaryContainer = this.summaryTab.locator("****");
+            readonly briefSummaryContainer = this.summaryTab.locator("div.summaries-container {hasText: 'Brief'}");
+            readonly keywordsContainer = this.summaryTab.locator("div.summaries-container {hasText: 'Keywords'}");
+            readonly summaryContainer = this.summaryTab.locator("div.summaries-container {hasText: 'Summary'}");
 
             //Elements inside Summary Tab (No material state)
-            private addSummaryButton = this.summaryTab.locator("****");
-            private addBriefSummaryAndKeywordsButton = this.summaryTab.locator("****");
+            private addSummaryButton = this.summaryTab.locator("button {hasText: 'Add summary'}");
+            private addBriefSummaryAndKeywordsButton = this.summaryTab.locator("button {hasText: 'Add brief summary and keywords'}");
 
 
                 //Elements inside Summary tab containers
-                private editBriefSummaryButton = this.briefSummaryContainer.locator("****");    //right-of
-                private editKeywordsButton = this.keywordsContainer.locator("****");        //right-of
-                private editSummaryButton = this.summaryContainer.locator("****");      //right-of
+                private editBriefSummaryButton = this.briefSummaryContainer.locator("div.summary-header__edit-summary").nth(0); //"button:right-of(:text('Brief'))"
+                private editKeywordsButton = this.keywordsContainer.locator("div.summary-header__edit-summary").nth(1); //"button:right-of(:text('Keywords'))"
+                private editSummaryButton = this.summaryContainer.locator("div.summary-header__edit-summary").nth(2); //"button:right-of(:text('Summary'))"
 
-                readonly briefSummaryContainerContent = this.briefSummaryContainer.locator("****")
+                readonly briefSummaryContainerContent = this.briefSummaryContainer.innerText()
                 readonly keywordsContainerContent = this.keywordsContainer.locator("****")
-                readonly summaryContainerContent = this.summaryContainer.locator("****")
+                readonly summaryContainerContent = this.summaryContainer.innerText()
 
 
 //******************************//
