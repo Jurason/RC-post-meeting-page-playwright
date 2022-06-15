@@ -16,8 +16,8 @@ export class AddEditModal {
         this.modalLocator = page.locator("#modal")
         this.cancelButton = page.locator("button.Button.Button--text-only")
         this.doneButton = page.locator("button.Button.Button--contained")
-        this.textArea = page.locator("div.DialogInner >> *textarea ")
-        this.counter = page.locator("div.max-length-of-entity")
+        this.textArea = page.locator("div.DialogInner >> textarea")
+        this.counter = page.locator("div.max-length-of-entity >> span")
     }
 
     //FUNCTIONS
