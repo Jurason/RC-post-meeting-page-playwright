@@ -5,16 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d55a8382-469e-4cce-8fd3-4dfec3886aa2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/RCV-26717.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RCV-27075.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pageObject/test.marketplace.page.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pageObject/test.page.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pageObject/Modal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/state.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/global-setup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/login-data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/recording-URL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/text-for-Input.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pageObject/AddEditModal.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pageObject/AddEditModal.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pageObject/PostMeeting.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pageObject/PostMeeting.page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playwright-report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/playwright-report/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test.example.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test.example.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RCV-26717.png" beforeDir="false" afterPath="$PROJECT_DIR$/RCV-26717.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RCV-27075.png" beforeDir="false" afterPath="$PROJECT_DIR$/RCV-27075.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixtures/mytest.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixtures/newFixture.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pageObject/AddEditModal.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pageObject/AddEditModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pageObject/Login.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pageObject/Login.page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pageObject/PostMeeting.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pageObject/PostMeeting.page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pageObject/Tabs/addEditModal.page.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pageObject/test.marketplace.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pageObject/test/test.marketplace.page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pageObject/test.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pageObject/test/test.page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playwright-report/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/playwright.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/playwright.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/example.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tests/example.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test.example.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test.example.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/elementData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/utils/element-data.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/loginData.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +44,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
+        <option value="package.json" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -53,16 +74,15 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/djon/WebstormProjects/Playwright_test/pageObject",
+    "last_opened_file_path": "C:/Users/djon/Downloads/sepia-theme-0.5.1.zip",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs.jest.jest_package": "",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.typescriptcompiler",
+    "settings.editor.selected.configurable": "preferences.sourceCode.JavaScript",
     "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2022.1\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
@@ -74,6 +94,7 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\djon\WebstormProjects\Playwright_test\tests" />
+      <recent name="C:\Users\djon\WebstormProjects\Playwright_test\pageObject\test" />
       <recent name="C:\Users\djon\WebstormProjects\Playwright_test\my_tests" />
       <recent name="C:\Users\djon\WebstormProjects\Playwright_test\my_test" />
     </key>
@@ -123,6 +144,11 @@
       <workItem from="1655221977846" duration="379000" />
       <workItem from="1655239896335" duration="7586000" />
       <workItem from="1655272167723" duration="39456000" />
+      <workItem from="1655328633515" duration="149000" />
+      <workItem from="1655355971637" duration="20568000" />
+      <workItem from="1655438689150" duration="2391000" />
+      <workItem from="1655531121863" duration="5484000" />
+      <workItem from="1655583431925" duration="44301000" />
     </task>
     <servers />
   </component>

@@ -1,13 +1,29 @@
 {
-  "name": "Playwright_test",
+  "name": "playwright_test",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "playwright-core": "^1.22.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.22.2"
+  },
   "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jurason/Playwright_test.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "@playwright/test": "^1.22.2"
-  }
+  "bugs": {
+    "url": "https://github.com/Jurason/Playwright_test/issues"
+  },
+  "homepage": "https://github.com/Jurason/Playwright_test#readme",
+  "type": "module"
+
 }

@@ -1,10 +1,10 @@
-import {Page} from "@playwright/test";
-import * as loginData from "../utils/loginData.json";
+// import {Page} from "@playwright/test";
+import loginData from "utils/login-data.js";
 
 export class LoginPage {
 
-    private page : Page;
-    constructor(page: Page) {
+    // let page;
+    constructor(page) {
         this.page = page;
     }
 
@@ -14,12 +14,13 @@ export class LoginPage {
     // }
 
     //functions
-    public async open(){
-        await this.page.goto(loginData.url)
-    }
+    // public async open(){
+    //     await this.page.goto(loginData.url)
+    // }
 
 //it can be changed by API request, POST credential directly to server without UI clicking
-    public async login() {
+    async login() {
+        await this.page.goto(loginData.urlDemoServer)
         await this.page.locator("#signin-btn").click()
         await this.page.locator("input#credential").fill(loginData.username)
         await this.page.locator("input#credential").press('Enter');

@@ -1,30 +1,31 @@
-import {expect, Locator, Page} from "@playwright/test";
-import { ElementPropertiesUI } from "../utils/elementData";
-import {AddEditModal} from "./AddEditModal";
+import {AddEditModal} from "./AddEditModal.js";
+import {expect} from "@playwright/test";
 
 
 export class PostMeetingPage {
 
-    //Main blocks on the page
-    readonly page: Page;
-    readonly header: Locator;
-    readonly player: Locator;
-    readonly tabs: Locator;
+    // //Main blocks on the page
+    // page: Page;
+    // header: Locator;
+    // player: Locator;
+    // tabs: Locator;
+    //
+    // summaryTab: Locator;
+    //
+    // briefSummaryContainer : Locator;
+    // keywordsContainer : Locator;
+    // summaryContainer : Locator;
+    //
+    // editBriefSummaryButton : Locator;
+    // editKeywordsButton : Locator;
+    // editSummaryButton : Locator;
+    //
+    //
+    //
+    // public addEditModal : AddEditModal;
 
-    readonly summaryTab: Locator;
 
-    readonly briefSummaryContainer : Locator;
-    readonly keywordsContainer : Locator;
-    readonly summaryContainer : Locator;
-
-    readonly editBriefSummaryButton : Locator;
-    readonly editKeywordsButton : Locator;
-    readonly editSummaryButton : Locator;
-
-    public addEditModal : AddEditModal;
-
-
-    constructor(page: Page) {
+    constructor(page) {
         this.page = page;
         this.header = page.locator("div.new-post-meeting-page__header")
         this.player = page.locator("div.new-post-meeting-page__player-summary-panel")
@@ -49,7 +50,7 @@ export class PostMeetingPage {
 
     //ELEMENTS
 
-        //Tabs
+        //test
         // public get summaryTab() {
         //     return this.page.locator("label[for='summaries']")
         // }
@@ -90,62 +91,54 @@ export class PostMeetingPage {
     //function
 
     //Choose recording by keywords existing (because keywords existing means full material recording condition (isn't it?)
-    public async openRecordingWithMaterial() {
+    async openRecordingWithMaterial() {
         await this.page.locator("div.recording-item__cell.recording-item__cell--keywords").first().click(); //Refactor locator
-        // await this.page.waitForLoadState()
     }
-
-    public async isActiveTab(locator) {
-        try {
+    //
+    async isActiveTab(locator) {
+            await locator.waitFor({state: "visible"})
             await expect(locator).toHaveClass("Tabs__item Tabs__item--active drag-handle");    //locator needs to be renamed //or check .isEnable method
             return console.log("Tab is active")
-        } catch (e) {
-            return console.log("Tab is disable, but should be active")
-        }
     }
-
-    public async openEditBriefModal() {
-        await this.editBriefSummaryButton.click()
-        await this.page.waitForLoadState()
-    }
-
-    public async openEditKeywordsModal() {
-        await this.editKeywordsButton.click()
-        await this.page.waitForLoadState()
-    }
-
-    public async openEditSummaryModal() {
+    //
+    // async openEditBriefModal() {
+    //     await this.editBriefSummaryButton.click()
+    //     // await this.addEditModal.________.waitFor({state: "visible"})
+    // }
+    //
+    // async openEditKeywordsModal() {
+    //     await this.editKeywordsButton.click()
+    //     // await this.addEditModal.________.waitFor({state: "visible"})
+    // }
+    //
+    async openEditSummaryModal() {
         await this.editSummaryButton.click()
-        await this.page.waitForLoadState()
+        await this.addEditModal.modalLocator.waitFor({state: "visible"})
     }
 
     // public async openAddSummaryModal() {
     //     await this.addSummaryButton.click()
-    //     await this.page.waitForLoadState()
+    //     await this.addEditModal.modalLocator.waitFor({state: "visible"})
     // }
     //
     // public async openBriefSummaryAndKeywordsModal() {
     //     await this.addBriefSummaryAndKeywordsButton.click()
-    //     await this.page.waitForLoadState()
+    //     await this.addEditModal.modalLocator.waitFor({state: "visible"})
     // }
 
 //******************************//
 
     //UI
-    public async allTabsIsDisplayed() {
-        const allTabs = await this.tabs.locator('****'); //common CSS selector for tabs
-        await expect(allTabs).toHaveCount(4)
-        //await expect(allTabs).toHaveText(["Summary","Highlights","Transcript","Participants"])
-    }
-
-    public async activeTabUI(tabLocator) {
-        try {
-            await expect(tabLocator).toHaveCSS("color", "#066FAC"); //Need to be checked via debugger
-            return console.log("Tab UI check is pass")
-        } catch (e) {
-            return console.log("Tab UI check is fail")
-        }
-    }
+    // public async allTabsIsDisplayed() {
+    //     const allTabs = await this.tabs.locator('****'); //common CSS selector for tabs
+    //     await expect(allTabs).toHaveCount(4)
+    //     //await expect(allTabs).toHaveText(["Summary","Highlights","Transcript","Participants"])
+    // }
+    //
+    // public async activeTabUI(tabLocator) {
+    //         await expect(tabLocator).toHaveCSS("color", "#066FAC"); //Need to be checked via debugger
+    //         return console.log("Tab UI check is pass")
+    // }
 
 
 
@@ -179,17 +172,6 @@ export class PostMeetingPage {
     // public get copyButton(containerName : Locator) {
     //     return containerName.
     // }
-
-
-
-
-
-
-
-
-
-
-
 
 
 

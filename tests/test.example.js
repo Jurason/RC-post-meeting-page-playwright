@@ -1,15 +1,15 @@
 import {expect, test} from "@playwright/test";
-import {TestClass} from "../pageObject/test.page";
-import {MarketplacePageClass} from "../pageObject/test.marketplace.page";
+// import {TestClass} from "../pageObject/test/test.page.js";
+// import {MarketplacePageClass} from "../pageObject/test/test.marketplace.page.js";
 
 
-const path : string = "https://www.opencart.com/index.php?route=common/home"
-const path2 : string = "https://www.opencart.com/index.php?route=marketplace/extension"
+const path = "https://www.opencart.com/index.php?route=common/home"
+const path2 = "https://www.opencart.com/index.php?route=marketplace/extension"
 
 
 test.describe('No materials', () => {
 
-    test('should allow me to add todo items', async ({ page }) => {
+    test.only('should allow me to add todo items', async ({ page }) => {
         await page.goto(path)
         // const header = await page.locator("div.container", {has: page.locator("div.navbar-header")})
         // const featuresTab = await header.locator("a", {hasText: "Features"})
@@ -41,18 +41,11 @@ test.describe('No materials', () => {
         // const locator2 = await page.locator("a.btn.btn-primary.btn-xl")
         // console.log(locator2.innerText())
         // await locator2.hover()
-
-
-
         const locator = page.locator("div.navbar-header >> a")
         await expect(locator).toHaveClass("navbar-brand");
-
-
-
-
     });
 
-    test.only('Test 2 Marketplace Page', async ({ page }) => {
+    test('Test 2 Marketplace Page', async ({ page }) => {
         await page.goto(path2)
 
         const marketplacePage = new MarketplacePageClass(page)
@@ -64,19 +57,11 @@ test.describe('No materials', () => {
         // console.log("***************************************************")
         // await marketplacePage.isElementHaveClass(marketplacePage.freeButton)
         // console.log("***************************************************")
-
+        //
         // console.log("***************************************************")
         // await marketplacePage.checkElementUI(marketplacePage.allButton, "background-color", "rgb(244, 245, 247)")
-
-
         console.log("***************************************************")
         await marketplacePage.checkTabNames(marketplacePage.buttonGroup.locator("a"))
-
-
-
-
-
-
 
         // const eleName = page.locator("button.header__button.ng-star-inserted")
         // await eleName.first().click()
@@ -122,7 +107,6 @@ test.describe('No materials', () => {
 
         // await modal.type(Array(10).join('a'))
         // await page.screenshot({ path: "array.join.png" });
-
 
     });
 });

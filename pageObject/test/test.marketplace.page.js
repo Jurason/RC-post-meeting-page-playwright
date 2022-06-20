@@ -4,11 +4,11 @@ import {expect, Locator, Page} from "@playwright/test";
 
 export class MarketplacePageClass {
 
-    readonly page : Page;
-    readonly buttonGroup : Locator;
-    readonly allButton : Locator;
-    readonly commercialButton : Locator;
-    readonly freeButton : Locator;
+    page;
+    buttonGroup;
+    allButton;
+    commercialButton;
+    freeButton;
     // readonly featuresTab : Locator;
 
 
@@ -42,7 +42,7 @@ export class MarketplacePageClass {
     public async checkTabNames(locator) {
         try {
             await expect(locator).toHaveText(['All', 'Commercial', 'Free']);
-            return console.log("All Tabs are exist")
+            return console.log("All test are exist")
         } catch (e) {
             return console.log("Something wrong, use debugger")
         }

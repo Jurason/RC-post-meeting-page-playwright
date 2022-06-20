@@ -1,0 +1,266 @@
+{
+  "cookies": [
+    {
+      "sameSite": "None",
+      "name": "CLW_VERSION",
+      "value": "22.2.3",
+      "domain": "login.ringcentral.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true
+    },
+    {
+      "sameSite": "None",
+      "name": "PLA_SESSION",
+      "value": "-3997811329566351421",
+      "domain": "login.ringcentral.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true
+    },
+    {
+      "sameSite": "None",
+      "name": "RCBRAND",
+      "value": "1210",
+      "domain": "login.ringcentral.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true
+    },
+    {
+      "sameSite": "None",
+      "name": "CSRFTOKEN",
+      "value": "vXU1Eyuy6WrupSaqaUpHJKsKri5zDb3z",
+      "domain": "login.ringcentral.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true
+    },
+    {
+      "sameSite": "Lax",
+      "name": "s_cc",
+      "value": "true",
+      "domain": ".ringcentral.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false
+    },
+    {
+      "sameSite": "None",
+      "name": "io_token_7c6a6574-f011-4c9a-abdd-9894a102ccef",
+      "value": "kNSn1VAKDiSqQ5kEEjHK1fKcZomUFtZFXM8vOyghThw=",
+      "domain": "mpsnare.iesnare.com",
+      "path": "/",
+      "expires": 1687257198.809632,
+      "httpOnly": true,
+      "secure": true
+    },
+    {
+      "sameSite": "None",
+      "name": "s_vi",
+      "value": "[CS]v1|31582678BA367282-6000052C49255BBF[CE]",
+      "domain": ".ringcentral.112.2o7.net",
+      "path": "/",
+      "expires": 1718793201.28825,
+      "httpOnly": false,
+      "secure": true
+    },
+    {
+      "sameSite": "Lax",
+      "name": "s_sq",
+      "value": "rc-4%3D%2526pid%253DLoginViaEmail_UnifiedUI%2526pidt%253D1%2526oid%253Dfunctionsn()%25257B%25257D%2526oidt%253D2%2526ot%253DBUTTON",
+      "domain": ".ringcentral.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false
+    },
+    {
+      "sameSite": "None",
+      "name": "RCAuthSession",
+      "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ7XCJybFwiOmZhbHNlLFwicnRmXCI6ZmFsc2UsXCJyY1wiOnRydWUsXCJ1blwiOlwidmFsa2VhcmVAaW5ib3gucnVcIixcImFpZFwiOlwiMjk0NjMzNzAyMFwiLFwiZWlkXCI6XCIzMjIxMjkzMDIwXCIsXCJiaWRcIjpcIjEyMTBcIixcImN0XCI6XCJQYXNzd29yZFwiLFwiYXRcIjpcImV5SnJhV1FpT2lJNE56WXlaalU1T0dRd05UazBOR1JpT0RaaVpqVmpZVGszT0RBME56WXdPQ0lzSW5SNWNDSTZJa3BYVkNJc0ltRnNaeUk2SWxKVE1qVTJJbjAuZXlKemRXSWlPaUl6TWpJeE1qa3pNREl3SWl3aWFYTnpJam9pYUhSMGNITTZYQzljTDNCc1lYUm1iM0p0TG5KcGJtZGpaVzUwY21Gc0xtTnZiU0lzSW1sa2JHVmZkR2x0WlNJNk1UWTFOVGMxTURBd01pd2lZbkpoYm1SZmFXUWlPaUl4TWpFd0lpd2ljMmxrSWpvaVlUUTJNV05sT1RrdE1UZzVOQzAwWXpjekxXRTVZVEV0WVdJMFkyRXlOVFppWVRZMklpd2lZWFZrSWpvaWVWQlNXVmxRVDBsUlVWZDVNMjlDY0ZKalVVbFJRU0lzSW1OeVpXUmxiblJwWVd4ZmRIbHdaU0k2SWxCaGMzTjNiM0prSWl3aVlXTmpiM1Z1ZEY5cFpDSTZJakk1TkRZek16Y3dNakFpTENKaGRYUm9YM1JwYldVaU9qRTJOVFUzTWpFeU1ERXNJbWxoZENJNk1UWTFOVGN5TVRJd01pd2ljMlZzWmw5emFXZHVaV1FpT21aaGJITmxMQ0pxZEdraU9pSmlNR0UzWWpRMll5MW1NRFZrTFRRNVkyWXRZVEUyTVMxaE1UazNOVE5qWTJJd09Ua2lmUS5GRy1mc1FDOFo0N096VlpCejdVVWx0UmpEZHpsYjY1QzZWaHhqcHk3cHBLZFpVWFllbURhUjZyYWVNckxVMGl2cXFTcEhLRHhseHNUeG5qYzBNXzBLR21mY1VpTUZuN1F6ei1idzRxNzlVZWJaLUlEVVdTQUd0S0J3R1hUc3BkNGt1eHdpaWFQN3pCLVgzMllNWkVQZ0NNUDhxNDg2bDBoUHlaTGlwQVIyNTVKdm9ydVNuSVoyaEFBU1BRMTQ1VkVuRGRGSXgyV1A0REhPSjFIVFIwVF9aQk40bVByd0ExSWw5T2laMVJJSXBYa0o4ajg4ck5CZ3hMeTVVeENOQzdRbG5TbWVDS0VmUENSVlF5cWVBT3V2NEdhMU5ZWEo2QlBQTy1tLVpNc09NY0xPUGdvaVhnc3lkRmZEcVZwWE1mLWh0OGRfcWxneE9CUXpLRmQxSEc2VlFcIixcImFsXCI6dHJ1ZSxcInJ0cFwiOlwiY29kZVwiLFwic2NcIjpcIlwiLFwibGF0XCI6MTY1NTcyMTIwMTQyOSxcImdhXCI6ZmFsc2UsXCJjZWFcIjp0cnVlLFwiY2NcIjpcIlwiLFwiY2NtXCI6XCJcIixcInBkXCI6dHJ1ZX0ifQ.3HbUduuhmnYwKLjvhpa3REKwGH1XhIvAqbfAV2OZxtI",
+      "domain": "login.ringcentral.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://demo-ai-wi.lab.nordigy.ru",
+      "localStorage": [
+        {
+          "name": "dispatch",
+          "value": "undefined"
+        },
+        {
+          "name": "videoprocessingPrefsVersion",
+          "value": "1"
+        },
+        {
+          "name": "previews",
+          "value": "{\"participants-floater\":{\"left\":\"auto\",\"right\":\"64px\",\"top\":\"80px\",\"bottom\":\"auto\"},\"small-video-block\":{\"left\":\"auto\",\"right\":\"0px\",\"top\":\"auto\",\"bottom\":\"80px\"},\"small-video-block-whiteboard-mode\":{\"left\":\"auto\",\"right\":\"0px\",\"top\":\"auto\",\"bottom\":\"190px\"}}"
+        },
+        {
+          "name": "guestEndpointId",
+          "value": "\"bb2e7a31-3741-4efb-bf0d-9d3da90d46d6\""
+        },
+        {
+          "name": "displayName",
+          "value": "null"
+        },
+        {
+          "name": "showGalleryWithSharing",
+          "value": "false"
+        },
+        {
+          "name": "ASCount",
+          "value": "16"
+        },
+        {
+          "name": "isPermsNeedUpdate",
+          "value": "true"
+        },
+        {
+          "name": "defaultGalleryViewMode",
+          "value": "{\"viewMode\":\"GALLERY_MODE_GRID\",\"viewModeSS\":\"GALLERY_MODE_FILM_STRIP\"}"
+        },
+        {
+          "name": "videoProcessing",
+          "value": "{\"performanceBenchmark\":{\"score\":null,\"running\":false,\"stage\":0,\"passed\":false,\"isFirstRun\":true},\"prefs\":{\"chromaKeySmoothness\":0.01,\"chromaKeySpill\":0.07,\"chromaKeyContrast\":1,\"chromaKeyBrightness\":0,\"chromaKeyGamma\":1,\"lightSpillIntensity\":2,\"lightSpillOpacity\":0.15,\"bgLumaOpacity\":0.1,\"maskOpacityThreshold\":0.4,\"maskBlurValue\":2,\"thresholdValue\":60,\"blurValue\":30,\"neuroioFaceDetectionDetector\":\"ULFD\",\"neuroioFaceDetectionDebug\":false,\"isWithSigmoidSmooth\":false,\"isWithStats\":false,\"smoothAlgorithm\":\"coefficient\",\"activeModel\":\"vbg_model_22.2.1\",\"backgroundType\":\"none\",\"isChromaKeyMode\":false,\"chromaKeyMode\":\"off\",\"userImageKey\":null,\"isWeathermanMode\":false,\"isWeathermanUnderlay\":false,\"weathermanUnderlayMode\":0,\"weathermanTVModePosition\":0,\"chromaKeyColor\":[0,0,0],\"weathermanSize\":0.5,\"weathermanOffsetX\":-0.3333333333333333,\"weathermanOffsetY\":0.3333333333333333,\"weathermanAlpha\":1,\"weathermanTVModePresenterSize\":0.6,\"weathermanTVModeBoardSize\":0.8,\"weathermanClassroomModePresenterSize\":0.75,\"chromaKeySimilarity\":0.48,\"performanceBenchmark\":null,\"performanceBenchmarkRunning\":false,\"performanceBenchmarkStage\":null,\"neuroioFaceDetection\":false,\"neuroioFaceDetectionZoom\":0.5,\"neuroioFaceDetectionStabilisation\":30,\"isWithVideoMirror\":true,\"scene\":null,\"neuroioLowLight\":false,\"neuroioLowLightIntensity\":50,\"neuroioBrightnessAlignment\":false,\"neuroioTouchUpAppearance\":false,\"neuroioTouchUpAppearanceIntensity\":0.01,\"isNativeMLEnabled\":false,\"isDebugMode\":false,\"cartoonization\":false,\"cartoonizationQuality\":200,\"isWhiteboardMode\":false},\"misc\":{\"isWeathermanAnimationComplete\":false},\"loadingState\":{\"isVirtualBackgroundLoading\":false,\"isFaceTrackingLoading\":false,\"isCartoonizationLoading\":false,\"isVirtualBackgroundTypeLoading\":false},\"virtualBackgroundIsPreviewActive\":false,\"virtualBackgroundError\":\"hardware-acceleration-error\"}"
+        },
+        {
+          "name": "callMe",
+          "value": "{\"CALL_ME\":{\"rememberNumber\":true,\"number\":\"\",\"selectedCountry\":{\"id\":\"1\",\"name\":\"United States\",\"isoCode\":\"US\",\"callingCode\":\"1\"},\"savedNumbers\":[],\"isCountryChangedByUser\":false},\"CALL_OUT\":{\"rememberNumber\":true,\"number\":\"\",\"selectedCountry\":{\"id\":\"1\",\"name\":\"United States\",\"isoCode\":\"US\",\"callingCode\":\"1\"},\"savedNumbers\":[],\"isCountryChangedByUser\":false}}"
+        },
+        {
+          "name": "ld:$anonUserId",
+          "value": "551c2560-f084-11ec-b573-038be32dbc09"
+        },
+        {
+          "name": "defaultProvider",
+          "value": "\"office365\""
+        },
+        {
+          "name": "storedEvents",
+          "value": "[{\"method\":\"page\",\"name\":\"RCV_Web_authentication_signIn\",\"properties\":{}}]"
+        },
+        {
+          "name": "ssSplitterTooltipDismissed",
+          "value": "false"
+        },
+        {
+          "name": "isOutgoingHDQualityEnabledByUser",
+          "value": "null"
+        },
+        {
+          "name": "ownExtension",
+          "value": "null"
+        },
+        {
+          "name": "dev",
+          "value": "{\"audioinput\":null,\"videoinput\":null,\"audiooutput\":null}"
+        },
+        {
+          "name": "inMeetingPerformanceReportFeatureFlag",
+          "value": "true"
+        },
+        {
+          "name": "showSelfVideo",
+          "value": "true"
+        },
+        {
+          "name": "prefs",
+          "value": "{\"showStreamsStats\":false,\"showDesktopNotifications\":false,\"videoCodecOverride\":null,\"ssCodecOverride\":null,\"useSharingSimulcastOverride\":null,\"sharingFrameRateOverride\":null,\"videoFrameRateOverride\":null,\"allowFullHd\":false,\"mediaCapturingReports\":null,\"videoBitrateMultiplier\":null,\"sharingBitrateMultiplier\":null,\"disableServerAgc\":false,\"p2pFactor\":0,\"cpuReceiveAdaptationEnabled\":true,\"cpuReceiveAdaptationForced\":false,\"controlsShownByDefault\":true,\"showControlsTrigger\":null,\"hideSelfCamera\":false,\"volume\":50,\"savedVolume\":50,\"volumeBeforeMute\":50,\"autoJoinAudio\":false,\"uss\":{\"notificationsRecordingReady\":false,\"notificationsRecordingDeleted\":false,\"notificationsRecordingShared\":false,\"notificationsMeetingEnded\":false},\"perms\":{\"video\":true,\"audio\":false},\"galleryOnScreensharing\":false,\"gallerySelfPreview\":true,\"gallerySelfPreviewOnEveryPage\":false,\"galleryVideoOnlyTiles\":false,\"maxInboundVideoQuality\":3,\"audioMicAgc\":true,\"audioMicAec\":true,\"audioMicNs\":true,\"audioSsAgc\":false,\"audioSsAec\":true,\"audioSsNs\":false,\"immediateLeavingEnabled\":false,\"disableDSCP\":true,\"isLegacySSEnabled\":false,\"alphaRing\":false,\"accessibilityMode\":false,\"walkieTalkieMode\":false,\"enableStreamSwitch\":true,\"maintenance\":false,\"isMeetingPasswordEnabled\":true,\"isPrivateChatsEnabled\":true,\"isAssignModeratorOnLeaveEnabled\":true,\"alwaysJoinFromBrowser\":false,\"sounds\":{\"io\":{\"group\":false,\"value\":\"PREF_SOUNDS_IO_JOINED_LEFT\",\"joined\":{\"newOnly\":false,\"suppress\":false}},\"connection\":false}}"
+        },
+        {
+          "name": "rc-platform-discovery-initial",
+          "value": "{\"version\":\"1.0.0\",\"retryCount\":3,\"retryInterval\":3,\"discoveryApi\":{\"defaultExternalUri\":\"https://platform.ringcentral.com/.well-known/entry-points/external\"},\"authApi\":{\"authorizationUri\":\"https://platform.ringcentral.com/restapi/oauth/authorize\",\"oidcDiscoveryUri\":\"https://platform.ringcentral.com/.well-known/openid-configuration\",\"defaultTokenUri\":\"https://platform.ringcentral.com/restapi/oauth/token\"},\"coreApi\":{\"baseUri\":\"https://platform.ringcentral.com\"},\"rcm\":{\"baseWebUri\":\"https://meetings.ringcentral.com\",\"sdkDomain\":\"rcm.ringcentral.com\"},\"rcv\":{\"baseWebUri\":\"https://v.ringcentral.com\",\"baseApiUri\":\"https://api-meet.ringcentral.com\",\"pubnubOrigin\":\"ringcentral.pubnubapi.com\"},\"edc\":{\"baseUri\":\"https://edcs.ringcentral.com\"},\"rcw\":{\"baseApiUri\":\"https://api-meet.ringcentral.com\"},\"featureFlagsApi\":{\"baseUri\":\"https://ffs.ringcentral.com\"},\"assetService\":{\"bssUri\":\"https://brand-assets.ringcentral.com\",\"assetId\":\"f7cade80b7cc92b991cf4d2806d6bd78\"}}"
+        },
+        {
+          "name": "pinnedFloater",
+          "value": "false"
+        },
+        {
+          "name": "rc-platform",
+          "value": "{\"token_type\":\"\",\"access_token\":\"\",\"expire_time\":1655721183997,\"expires_in\":\"-1\",\"refresh_token\":\"\",\"refresh_token_expires_in\":\"\",\"refresh_token_expire_time\":0,\"scope\":\"\"}"
+        },
+        {
+          "name": "splitterPosition",
+          "value": "0.7"
+        },
+        {
+          "name": "ld:5efa23d1bc3c320bb20f071a:$diagnostics",
+          "value": "{\"dataSinceDate\":1655721178629,\"droppedEvents\":0,\"eventsInLastBatch\":0,\"streamInits\":[]}"
+        }
+      ]
+    },
+    {
+      "origin": "https://login.ringcentral.com",
+      "localStorage": [
+        {
+          "name": "ajs_group_id",
+          "value": "null"
+        },
+        {
+          "name": "localStorageAvailabilityTest",
+          "value": "localStorageAvailabilityTest"
+        },
+        {
+          "name": "ajs_user_id",
+          "value": "null"
+        },
+        {
+          "name": "mp_36746603ab0a430483b3b23e8b476a10_mixpanel",
+          "value": "{\"distinct_id\": \"18180ac8b2bd85-01550b59800e57-1133069-e1000-18180ac8b2cc27\",\"$device_id\": \"18180ac8b2bd85-01550b59800e57-1133069-e1000-18180ac8b2cc27\",\"mp_lib\": \"Segment: web\",\"$initial_referrer\": \"$direct\",\"$initial_referring_domain\": \"$direct\"}"
+        },
+        {
+          "name": "segmentio.9ebc6d19-d589-44af-947f-bd5ce86f09b9.queue",
+          "value": "[]"
+        },
+        {
+          "name": "ajs_group_properties",
+          "value": "{}"
+        },
+        {
+          "name": "ajs_user_traits",
+          "value": "{}"
+        },
+        {
+          "name": "UNIFIED_PREVIOUS_SIGNIN_CREDENTIAL",
+          "value": "valkeare@inbox.ru"
+        },
+        {
+          "name": "segmentio.9ebc6d19-d589-44af-947f-bd5ce86f09b9.ack",
+          "value": "1655721203907"
+        },
+        {
+          "name": "segmentio.9ebc6d19-d589-44af-947f-bd5ce86f09b9.inProgress",
+          "value": "{}"
+        },
+        {
+          "name": "segmentio.9ebc6d19-d589-44af-947f-bd5ce86f09b9.reclaimEnd",
+          "value": "null"
+        },
+        {
+          "name": "io_temp",
+          "value": "kNSn1VAKDiSqQ5kEEjHK1fKcZomUFtZFXM8vOyghThw="
+        },
+        {
+          "name": "debug",
+          "value": "undefined"
+        },
+        {
+          "name": "segmentio.9ebc6d19-d589-44af-947f-bd5ce86f09b9.reclaimStart",
+          "value": "null"
+        }
+      ]
+    }
+  ]
+}

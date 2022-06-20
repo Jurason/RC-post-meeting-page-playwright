@@ -1,14 +1,14 @@
-import {Locator, Page} from "@playwright/test";
+// import {Locator, Page} from "@playwright/test";
 
 
 export class AddEditModal {
 
-    readonly page : Page;
-    readonly modalLocator: Locator;
-    readonly cancelButton : Locator;
-    readonly doneButton : Locator;
-    readonly textArea : Locator;
-    readonly counter : Locator;
+    // page : Page;
+    // modalLocator: Locator;
+    // cancelButton : Locator;
+    // doneButton : Locator;
+    // textInput : Locator;
+    // counter : Locator;
 
 
     constructor(page) {
@@ -16,7 +16,7 @@ export class AddEditModal {
         this.modalLocator = page.locator("#modal")
         this.cancelButton = page.locator("button.Button.Button--text-only")
         this.doneButton = page.locator("button.Button.Button--contained")
-        this.textArea = page.locator("div.DialogInner >> textarea")
+        this.textInput = page.locator("div.DialogInner >> textarea")
         this.counter = page.locator("div.max-length-of-entity >> span")
     }
 
@@ -30,15 +30,10 @@ export class AddEditModal {
     //     await this.doneButton.click()
     // }
 
-    public async textAreaInput(symbols: string, keyword: string, pressTimes: number) {
+    async textAreaInput(symbols, keyword, pressTimes) {
         for (let i = 0; i < pressTimes; i++) {
-            await this.textArea.type(symbols)
-            await this.textArea.press(keyword)
+            await this.textInput.type(symbols)
+            await this.textInput.press(keyword)
         }
     }
-
-
-
-
-
 }
