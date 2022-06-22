@@ -1,5 +1,5 @@
 // import {Page} from "@playwright/test";
-import loginData from "utils/login-data.js";
+import loginData from "../utils/login-data.js";
 
 export class LoginPage {
 

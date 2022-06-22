@@ -1,28 +1,8 @@
 import {AddEditModal} from "./AddEditModal.js";
-import {expect} from "@playwright/test";
+import { expect } from "@playwright/test";
 
 
 export class PostMeetingPage {
-
-    // //Main blocks on the page
-    // page: Page;
-    // header: Locator;
-    // player: Locator;
-    // tabs: Locator;
-    //
-    // summaryTab: Locator;
-    //
-    // briefSummaryContainer : Locator;
-    // keywordsContainer : Locator;
-    // summaryContainer : Locator;
-    //
-    // editBriefSummaryButton : Locator;
-    // editKeywordsButton : Locator;
-    // editSummaryButton : Locator;
-    //
-    //
-    //
-    // public addEditModal : AddEditModal;
 
 
     constructor(page) {
@@ -40,9 +20,12 @@ export class PostMeetingPage {
         this.keywordsContainer = page.locator("div.summaries-container", {hasText: 'Keywords'});
         this.summaryContainer = page.locator("div.summaries-container", {hasText: 'Summary'});
 
-        this.editBriefSummaryButton = page.locator("div.summary-header__edit-summary").nth(0); //"button:right-of(:text('Brief'))"
-        this.editKeywordsButton = page.locator("div.summary-header__edit-summary").nth(1); //"button:right-of(:text('Keywords'))"
-        this.editSummaryButton = page.locator("div.summary-header__edit-summary").nth(2); //"button:right-of(:text('Summary'))"
+        this.editBriefSummaryButton = page.locator("div.summary-header__edit-summary").nth(0);
+        this.editKeywordsButton = page.locator("div.summary-header__edit-summary").nth(1);
+        this.editSummaryButton = page.locator("div.summary-header__edit-summary").nth(2);
+
+        this.addSummaryButton = page.locator("button {hasText: 'Add summary'}")
+        this.addBriefSummaryAndKeywordsButton = page.locator("button {hasText: 'Add brief summary and keywords'}")
 
         this.addEditModal = new AddEditModal(page)
     }
@@ -90,21 +73,17 @@ export class PostMeetingPage {
 //******************************//
     //function
 
-    //Choose recording by keywords existing (because keywords existing means full material recording condition (isn't it?)
-    async openRecordingWithMaterial() {
-        await this.page.locator("div.recording-item__cell.recording-item__cell--keywords").first().click(); //Refactor locator
-    }
+
     //
     async isActiveTab(locator) {
             await locator.waitFor({state: "visible"})
-            await expect(locator).toHaveClass("Tabs__item Tabs__item--active drag-handle");    //locator needs to be renamed //or check .isEnable method
-            return console.log("Tab is active")
+            await expect.soft(locator, 'Active tab should have border with color #066fac').toHaveCSS("border-color", "rgb(6, 111, 172)");    //locator needs to be renamed //or check .isEnable method
     }
     //
-    // async openEditBriefModal() {
-    //     await this.editBriefSummaryButton.click()
-    //     // await this.addEditModal.________.waitFor({state: "visible"})
-    // }
+    async openEditBriefModal() {
+        await this.editBriefSummaryButton.click()
+        await this.addEditModal.modalLocator.waitFor({state: "visible"})
+    }
     //
     // async openEditKeywordsModal() {
     //     await this.editKeywordsButton.click()
@@ -139,74 +118,6 @@ export class PostMeetingPage {
     //         await expect(tabLocator).toHaveCSS("color", "#066FAC"); //Need to be checked via debugger
     //         return console.log("Tab UI check is pass")
     // }
-
-
-
-    // public get briefSummaryContainer() {
-    //     return this.summaryTab.locator("*****")
-    // }
-    //
-    // public get keywordsContainer() {
-    //     return this.summaryTab.locator("*****")
-    // }
-    //
-    // public get summaryContainer() {
-    //     return this.summaryTab.locator("*****")
-    // }
-
-
-
-    // public get editBriefSummaryButton() {
-    //     return this.briefSummaryContainer.locator("*****")
-    // }
-    //
-    // public get editKeywordsButton() {
-    //     return this.keywordsContainer.locator("*****")
-    // }
-    //
-    // public get editSummaryButton() {
-    //     return this.summaryContainer.locator("*****")
-    // }
-    //
-    //
-    // public get copyButton(containerName : Locator) {
-    //     return containerName.
-    // }
-
-
-
-
-    // public async getElementName(){
-    //
-    //     // return await this.tabs.locator().getAttribute("textContent")
-    // }
-    //
-    // async getElementProperties(locatorName: Locator): Promise<ElementPropertiesUI> {
-    //     const elementProperties = new ElementPropertiesUI()
-    //
-    //     elementProperties.name = await this.getElementName()
-    //
-    //     return elementProperties
-    // }
-
-
-
-    
-
-
-    //functions
-    // public get header() {
-    //     return this.page.locator("div.new-post-meeting-page__header")
-    // }
-    // public get player() {
-    //     return this.page.locator("div.new-post-meeting-page__player-summary-panel")
-    // }
-    // public get tabs() {
-    //     return this.page.locator("div.post-meeting-tabs")
-    // }
-
-
-    //Describe page's frames
 
 }
 
