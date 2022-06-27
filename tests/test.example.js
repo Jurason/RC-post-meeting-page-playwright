@@ -5,12 +5,22 @@ import {TestClass} from "../pageObject/test/test.page.js";
 
 const path = "https://www.opencart.com/index.php?route=common/home"
 const path2 = "https://www.opencart.com/index.php?route=marketplace/extension"
+const path3 = "https://demo-ai-wi.lab.nordigy.ru/welcome/meetings/recordings/recording/b6dc6132-bbfa-4457-8c54-81b0a1cf8e36!us-09-sjc31@us-09"
 
 
 test.describe('No materials', () => {
 
     test.only('should allow me to add todo items', async ({ page }) => {
-        await page.goto(path)
+        await page.goto(path3)
+        await page.locator('button', {hasText: "Continue"}).click()
+        await page.locator("button.btn.btn-primary").click()
+        await page.locator("button.btn.btn-primary").click()
+
+        const keywordText = await page.locator('div.keywords-container.keywords-container--no-truncate >> ul >> li').last().innerText()
+        console.log(keywordText);
+
+
+
         // const header = await page.locator("div.container", {has: page.locator("div.navbar-header")})
         // const featuresTab = await header.locator("a", {hasText: "Features"})
         // await featuresTab.click()
@@ -45,13 +55,13 @@ test.describe('No materials', () => {
         // await expect(locator).toHaveClass("navbar-brand");
         // const testClass = new TestClass(page)
         // const clientH = await page.getAttribute("a.navbar-brand", 'baseURI')
-        const tweets = page.locator('a.navbar-brand');
-        // expect(await tweets.evaluate(node => node.clientHeight)).toBe('10 retweets');
-        const tweetsClientHeight = await tweets.evaluate(node => node.clientHeight)
-        const tweetsScrollHeight = await tweets.evaluate(node => node.scrollHeight)
+        // const tweets = page.locator('a.navbar-brand');
+        // // expect(await tweets.evaluate(node => node.clientHeight)).toBe('10 retweets');
+        // const tweetsClientHeight = await tweets.evaluate(node => node.clientHeight)
+        // const tweetsScrollHeight = await tweets.evaluate(node => node.scrollHeight)
 
-        console.log(tweetsClientHeight);
-        console.log(tweetsScrollHeight);
+        // console.log(tweetsClientHeight);
+        // console.log(tweetsScrollHeight);
 
     });
 

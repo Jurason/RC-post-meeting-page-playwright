@@ -8,17 +8,7 @@ export class LoginPage {
         this.page = page;
     }
 
-    //permissions
-    // public async permissions(){
-    //     this.page.context().grantPermissions(['camera', 'microphone'])
-    // }
-
-    //functions
-    // public async open(){
-    //     await this.page.goto(loginData.url)
-    // }
-
-//it can be changed by API request, POST credential directly to server without UI clicking
+//it could be changed by API request, POST credential directly to server without UI clicking
     async login() {
         await this.page.goto(loginData.urlDemoServer)
         await this.page.locator("#signin-btn").click()
@@ -28,6 +18,5 @@ export class LoginPage {
         await this.page.locator("input#password").press('Enter');
         await this.page.locator("button.btn.btn-primary").click()
         await this.page.locator("button.btn.btn-primary").click()
-
     }
 }

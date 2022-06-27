@@ -2,21 +2,22 @@
 import { devices } from '@playwright/test';
 
 const config = {
-  testDir: './specs',
-  // testMatch: 'post-meeting-page-full-material.js',
+  // testDir: './tests/specs',
+  testMatch: 'post-meeting-page-full-material.js',
   // testMatch: 'test.example.js',
   timeout: 120 * 1000,
   expect: {
     timeout: 5000
   },
-  // globalSetup: "./utils/global-setup",
+  globalSetup: "./utils/global-setup",
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 1 : undefined,
+  // workers: process.env.CI ? 1 : undefined,
+  workers: 1,
   reporter: 'html',
   use: {
-    headless: true,
+    headless: false,
     actionTimeout: 0,
     storageState: './state.json',
     permissions: ['camera', 'microphone'],
