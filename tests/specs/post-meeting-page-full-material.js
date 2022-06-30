@@ -153,7 +153,7 @@ test.describe('Demo server', async () => {
         await page.screenshot({ path: "RCV-26956.png" });
     })
 
-    test.only('Edit keywords functionality : RCV-26957 : FM', async () => {                      //TBD
+    test('Edit keywords functionality : RCV-26957 : FM', async () => {                      //TBD
         const initialLastKeywordText = await postMeetingPage.tabs.summaryTab.keywordSection.getLastKeywordText()
         const countOfKeywords = await postMeetingPage.tabs.summaryTab.keywordSection.getCountOfKeywords()
         //Step#1
@@ -162,31 +162,30 @@ test.describe('Demo server', async () => {
         await expect(postMeetingPage.modal.doneButton).toBeDisabled()
         //Step#2
         await postMeetingPage.modal.deleteKeywordBoxes(1)
-        await postMeetingPage.modal.keywordInput.toHaveAttribute('placeholder', 'Add new keyword...')
+        await expect(postMeetingPage.modal.keywordInput).toHaveAttribute('placeholder', 'Add new keyword...')
         await expect(postMeetingPage.modal.doneButton).toBeEnabled()
         //Step#3
         await postMeetingPage.modal.cancelButton.click()
         let currentLastKeywordText = await postMeetingPage.tabs.summaryTab.keywordSection.getLastKeywordText()
 
-        console.log(currentLastKeywordText);
         await expect.soft(initialLastKeywordText).toEqual(currentLastKeywordText)
         //Step#4
         await postMeetingPage.tabs.summaryTab.keywordSection.editButton.openModal()
         //Step#5
+
         await postMeetingPage.modal.addKeywordBoxes(textForInput.newString)
         await expect(postMeetingPage.modal.letterCounter).toHaveText(`15 / 15`)
         await expect(postMeetingPage.modal.doneButton).toBeEnabled()
         //Step#6
         await page.mouse.click(0,0)
         //Step#7
-        let newLastKeywordText = await postMeetingPage.modal.keywordBox.last().textContent()
+        let newLastKeywordText = await postMeetingPage.modal.keywordBoxInput.inputValue()
         await postMeetingPage.modal.doneButton.click()
         await postMeetingPage.modal.modalLocator.waitFor({state:'hidden'})
         currentLastKeywordText = await postMeetingPage.tabs.summaryTab.keywordSection.getLastKeywordText()
         await expect.soft(currentLastKeywordText).toEqual(newLastKeywordText)
         await page.screenshot({ path: "RCV-26957.png" });
-
-    })             //TBD
+    })
 })
 
 

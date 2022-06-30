@@ -1,5 +1,5 @@
 import {expect, test} from "@playwright/test";
-import {TestClass} from "../pageObject/test/test.page.js";
+import {TestClass} from "../utils/test/test.page.js";
 // import {MarketplacePageClass} from "../pageObject/test/test.marketplace.page.js";
 
 

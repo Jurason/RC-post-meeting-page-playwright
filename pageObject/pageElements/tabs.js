@@ -17,9 +17,9 @@ export class TabPanel {
 
 const TAB_CONTAINER_SELECTOR = '.Tabs__item'
 
-class Tab {
-    constructor(lastLocator, containerSelector) {
-        this.modalContainer = lastLocator.locator(`${TAB_CONTAINER_SELECTOR}${containerSelector}`)
+class Tab {                                         //не является родительским классом для класса SummaryTab, это просто указатель на хэдэр
+    constructor(lastLocator, containerSelector) {   //поэтому селектор в классе SummaryTab не чейнится с селектором из класса Tab, потому что в
+        this.modalContainer = lastLocator.locator(`${TAB_CONTAINER_SELECTOR}${containerSelector}`) //DOM они расположены параллельно
     }
     async tabIsActive(){
         await this.modalContainer.waitFor({state: "visible"})
@@ -32,12 +32,16 @@ const BRIEF_SUMMARY_SECTION_CONTAINER_SELECTOR = '.summaries-container  >> nth=0
 const KEYWORDS_SECTION_CONTAINER_SELECTOR = '.summaries-container >> nth=1'
 const SUMMARY_SECTION_CONTAINER_SELECTOR = '.summaries-container >> nth=2'
 
+const NO_MATERIAL_AVAILABLE_IMAGE_SELECTOR = '.informative-img'
+
 class SummaryTab extends Tab {
     constructor(lastLocator, containerSelector) {
         super(lastLocator, containerSelector);
         this.briefSummarySection = new SummaryTabSection(lastLocator, BRIEF_SUMMARY_SECTION_CONTAINER_SELECTOR)
         this.keywordSection = new SummaryTabSection(lastLocator, KEYWORDS_SECTION_CONTAINER_SELECTOR)
         this.summarySection = new SummaryTabSection(lastLocator, SUMMARY_SECTION_CONTAINER_SELECTOR)
+
+        // this.moMaterialSection = new
     }
 }
 
@@ -58,8 +62,8 @@ const COPY_BUTTON_SELECTOR = 'span.summary-header__copy-icon.icon-copy'
 const EDITED_SIGN_SELECTOR = '.edit-sign'
 
 class SummaryTabSection {
-    constructor(lastLocator, containerSelector) {
-        this.modalSectionLocator = lastLocator.locator(containerSelector)
+    constructor(lastLocator, sectionSelector) {
+        this.modalSectionLocator = lastLocator.locator(sectionSelector)
         this.editedSign = new EditedSign(this.modalSectionLocator, EDITED_SIGN_SELECTOR);
         this.editButton = new EditButton(this.modalSectionLocator, EDIT_BUTTON_SELECTOR);
         this.copyButton = new CopyButton(this.modalSectionLocator, COPY_BUTTON_SELECTOR);
@@ -89,6 +93,11 @@ class SummaryTabSection {
 
 }
 
+class NoMaterialSummaryTabSection {
+    constructor(lastLocator, sectionSelector) {
+
+    }
+}
 class CopyButton {
     constructor(lastLocator, buttonLocator) {
         this.copyButton = lastLocator.locator(buttonLocator);

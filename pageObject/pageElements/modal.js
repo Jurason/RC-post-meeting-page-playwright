@@ -8,6 +8,7 @@ const TEXT_INPUT_SELECTOR = 'textarea'
 const LETTER_COUNTER_SELECTOR = '.max-length-of-entity >> span'
 const KEYWORDS_INPUT_SELECTOR = '.future-keyword'
 const EXISTING_KEYWORD_SELECTOR = '.edit-brief-keywords-modal__keyword'
+const EXISTING_KEYWORD_INPUT_SELECTOR = '.edit-brief-keywords-modal__keyword >> input'
 
 export class Modal {
     constructor(lastLocator, modalSelector) {
@@ -20,6 +21,7 @@ export class Modal {
         this.viewportHeight = lastLocator.viewportSize().height
 
         this.keywordBox = this.modalLocator.locator(EXISTING_KEYWORD_SELECTOR)
+        this.keywordBoxInput = this.modalLocator.locator(EXISTING_KEYWORD_INPUT_SELECTOR).last()
         this.keywordInput = this.modalLocator.locator(KEYWORDS_INPUT_SELECTOR).last()
     }
 
@@ -70,6 +72,7 @@ export class Modal {
         }
     }
     async addKeywordBoxes(textForKeywords){
+        if(await this.keywordInput.isDisabled()) await this.deleteKeywordBoxes(1)
         while(await this.keywordInput.isEditable()){
             await this.keywordInput.fill(textForKeywords)
             await this.keywordInput.press('Enter')

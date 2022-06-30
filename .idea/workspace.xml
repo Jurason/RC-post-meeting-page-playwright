@@ -5,22 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d55a8382-469e-4cce-8fd3-4dfec3886aa2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Full material post-meeting-page layout.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pageObject/pageElements/header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pageObject/pageElements/modal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pageObject/pageElements/player.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pageObject/pageElements/tabs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Full material post-meeting-page layout.png" beforeDir="false" afterPath="$PROJECT_DIR$/Full material post-meeting-page layout.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Full material summary tab.png" beforeDir="false" afterPath="$PROJECT_DIR$/Full material summary tab.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RCV-26956.png" beforeDir="false" afterPath="$PROJECT_DIR$/RCV-26956.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RCV-27075.png" beforeDir="false" afterPath="$PROJECT_DIR$/RCV-27075.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pageObject/AddEditModal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pageObject/Login.page.js" beforeDir="false" afterPath="$PROJECT_DIR$/pageObject/Login.page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pageObject/Modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/pageObject/pageElements/edited-sign.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pageObject/PostMeeting.page.js" beforeDir="false" afterPath="$PROJECT_DIR$/pageObject/PostMeeting.page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pageObject/pageElements/modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/pageObject/pageElements/modal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pageObject/pageElements/tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/pageObject/pageElements/tabs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pageObject/test/test.marketplace.page.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/test/test.marketplace.page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pageObject/test/test.page.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/test/test.page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/playwright.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/playwright.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/state.json" beforeDir="false" afterPath="$PROJECT_DIR$/state.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/state.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/specs/post-meeting-page-NO-material.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/specs/post-meeting-page-NO-material.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/specs/post-meeting-page-full-material.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/specs/post-meeting-page-full-material.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test.example.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test.example.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/login-data.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/login-data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/text-for-input.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/text-for-input.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,11 +83,11 @@
       <recent name="C:\Users\djon\WebstormProjects\Playwright_test" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\djon\WebstormProjects\Playwright_test\utils" />
       <recent name="C:\Users\djon\WebstormProjects\Playwright_test\pageObject\pageElements" />
       <recent name="C:\Users\djon\WebstormProjects\Playwright_test\tests\spec" />
       <recent name="C:\Users\djon\WebstormProjects\Playwright_test\tests" />
       <recent name="C:\Users\djon\WebstormProjects\Playwright_test\pageObject\test" />
-      <recent name="C:\Users\djon\WebstormProjects\Playwright_test\my_tests" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.modal.js">
@@ -146,7 +149,9 @@
       <workItem from="1656144880187" duration="53204000" />
       <workItem from="1656255868048" duration="13961000" />
       <workItem from="1656305203835" duration="18908000" />
-      <workItem from="1656331595265" duration="2755000" />
+      <workItem from="1656331595265" duration="5048000" />
+      <workItem from="1656424720640" duration="8082000" />
+      <workItem from="1656527894863" duration="14748000" />
     </task>
     <servers />
   </component>
@@ -172,7 +177,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/pageObject/pageElements/modal.js</url>
-          <line>21</line>
+          <line>22</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

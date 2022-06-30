@@ -4,12 +4,13 @@ import { devices } from '@playwright/test';
 const config = {
   // testDir: './tests/specs',
   testMatch: 'post-meeting-page-full-material.js',
+  // testMatch: 'post-meeting-page-NO-material.js',
   // testMatch: 'test.example.js',
-  timeout: 120 * 1000,
+  timeout: 240 * 1000,
   expect: {
     timeout: 5000
   },
-  globalSetup: "./utils/global-setup",
+  // globalSetup: "./utils/global-setup",
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,

@@ -1,11 +1,13 @@
 import {chromium, expect, test, request} from "@playwright/test";
-import {PostMeetingPage} from "pageObject/PostMeeting.page.js";
+import {PostMeetingPage} from "../../pageObject/PostMeeting.page.js";
 
 import URL from "../../utils/recording-URL.js";
 import textExample from "../../utils/text-for-input.js";
 import textForInput from "../../utils/text-for-input.js";
 
-test.describe.configure({ mode: 'serial' })('Demo server', async () => {
+//***************************************NO MATERIAL******************************//
+
+test.describe('Demo server', async () => {
 
     let page;
     let postMeetingPage;
@@ -13,7 +15,7 @@ test.describe.configure({ mode: 'serial' })('Demo server', async () => {
     test.beforeAll(async ({browser}) => {
         const context = await browser.newContext()
         page = await context.newPage()
-        await page.goto(URL.fullMaterialRecordingDemo)
+        await page.goto(URL.noMaterialRecordingDemo)
         //need to fix. maybe https://playwright.dev/docs/auth#session-storage
         await page.locator('button', {hasText: "Continue"}).click()
         await page.locator("button.btn.btn-primary").click()
@@ -25,12 +27,13 @@ test.describe.configure({ mode: 'serial' })('Demo server', async () => {
     })
 
     test("Post meeting page UI : RCV-25017 : NoM", async () => {
-        await postMeetingPage.header.waitFor({state: "visible"})
-        await postMeetingPage.player.waitFor({state: "visible"})
-        await postMeetingPage.tabs.waitFor({state: "visible"})
+        await postMeetingPage.header.headerlocator.waitFor({state: "visible"})
+        await postMeetingPage.player.playerLocator.waitFor({state: "visible"})
+        await postMeetingPage.tabs.tabPanelLocator.waitFor({state: "visible"})
+        // await postMeetingPage.
         //Add "about" or "material status" locator
         await page.screenshot({ path: "No material post-meeting-page layout.png" });
-    })          //TBD
+    })
 
     test("Summary tab UI : RCV-26737 : NoM", async () => {
         await postMeetingPage.summaryTab.isActiveTab()
