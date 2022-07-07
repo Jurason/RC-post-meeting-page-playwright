@@ -2,58 +2,63 @@ import {EditedSign} from "./edited-sign.js";
 import {expect} from "@playwright/test";
 
 
-const SUMMARY_TAB_CONTAINER_SELECTOR = ':has-text("Summary")'
-const TRANSCRIPT_TAB_CONTAINER_SELECTOR = ':has-text("Transcript")'
-const HIGHLIGHTS_TAB_CONTAINER_SELECTOR = ':has-text("Highlights")'
+const SUMMARY_TAB_BUTTON_SELECTOR = ':has-text("Summary")'
+const TRANSCRIPT_TAB_BUTTON_SELECTOR = ':has-text("Transcript")'
+const HIGHLIGHTS_TAB_BUTTON_SELECTOR = ':has-text("Highlights")'
 
 export class TabPanel {
     constructor(lastLocator, tabPanelSelector) {
         this.tabPanelLocator = lastLocator.locator(tabPanelSelector)
-        this.summaryTab = new SummaryTab(this.tabPanelLocator, SUMMARY_TAB_CONTAINER_SELECTOR)
-        this.transcriptTab = new TranscriptTab(this.tabPanelLocator, TRANSCRIPT_TAB_CONTAINER_SELECTOR)
-        this.highlightsTab = new HighlightsTab(this.tabPanelLocator, HIGHLIGHTS_TAB_CONTAINER_SELECTOR)
+        this.summaryTab = new SummaryTab(this.tabPanelLocator, SUMMARY_TAB_BUTTON_SELECTOR)
+        this.transcriptTab = new TranscriptTab(this.tabPanelLocator, TRANSCRIPT_TAB_BUTTON_SELECTOR)
+        this.highlightsTab = new HighlightsTab(this.tabPanelLocator, HIGHLIGHTS_TAB_BUTTON_SELECTOR)
     }
 }
 
 const TAB_CONTAINER_SELECTOR = '.Tabs__item'
-
-class Tab {                                         //не является родительским классом для класса SummaryTab, это просто указатель на хэдэр
-    constructor(lastLocator, containerSelector) {   //поэтому селектор в классе SummaryTab не чейнится с селектором из класса Tab, потому что в
-        this.modalContainer = lastLocator.locator(`${TAB_CONTAINER_SELECTOR}${containerSelector}`) //DOM они расположены параллельно
+                //фактически HeaderTab класс нужен только для использования функции tabIsActive
+                //То есть HeaderTab класс нужен для всех таб, поэтому мы его выносим на уровень выше
+                //в строгом смысле не является родительским классом для класса SummaryTab, это просто указатель на хэдэр
+                //поэтому селектор в классе SummaryTab не чейнится с селектором из класса HeaderTab, потому что в
+                //DOM они расположены параллельно на одном уровне
+class HeaderTab {
+    constructor(lastLocator, containerSelector) {
+        this.headerTab = lastLocator.locator(`${TAB_CONTAINER_SELECTOR}${containerSelector}`)
     }
     async tabIsActive(){
-        await this.modalContainer.waitFor({state: "visible"})
-        await expect.soft(this.modalContainer, 'Active tab should have border with color #066fac').toHaveCSS("border-color", "rgb(6, 111, 172)");
+        await this.headerTab.waitFor({state: "visible"})
+        await expect.soft(this.headerTab, 'Active tab should have border with color #066fac').toHaveCSS("border-color", "rgb(6, 111, 172)");
     }
-
+    async clickOnTab(){
+        await this.headerTab.click()
+    }
 }
 
 const BRIEF_SUMMARY_SECTION_CONTAINER_SELECTOR = '.summaries-container  >> nth=0'
 const KEYWORDS_SECTION_CONTAINER_SELECTOR = '.summaries-container >> nth=1'
 const SUMMARY_SECTION_CONTAINER_SELECTOR = '.summaries-container >> nth=2'
+const NO_MATERIAL_AVAILABLE_CONTAINER_SELECTOR = '.summary-tab__alternative-container'
 
-const NO_MATERIAL_AVAILABLE_IMAGE_SELECTOR = '.informative-img'
-
-class SummaryTab extends Tab {
+class SummaryTab extends HeaderTab {
     constructor(lastLocator, containerSelector) {
-        super(lastLocator, containerSelector);
+        super(lastLocator, containerSelector);            //В данном месте, через наследование, я связываю Хэдэр и тело табы.
         this.briefSummarySection = new SummaryTabSection(lastLocator, BRIEF_SUMMARY_SECTION_CONTAINER_SELECTOR)
         this.keywordSection = new SummaryTabSection(lastLocator, KEYWORDS_SECTION_CONTAINER_SELECTOR)
         this.summarySection = new SummaryTabSection(lastLocator, SUMMARY_SECTION_CONTAINER_SELECTOR)
 
-        // this.moMaterialSection = new
+        this.moMaterialSection = new NoMaterialSummaryTabSection(lastLocator, NO_MATERIAL_AVAILABLE_CONTAINER_SELECTOR)
     }
 }
 
-class TranscriptTab {
-    constructor() {
-
+class TranscriptTab extends HeaderTab {
+    constructor(lastLocator, containerSelector) {
+        super(lastLocator, containerSelector);
     }
 }
 
-class HighlightsTab {
-    constructor() {
-
+class HighlightsTab extends HeaderTab {
+    constructor(lastLocator, containerSelector) {
+        super(lastLocator, containerSelector);
     }
 }
 
@@ -82,37 +87,52 @@ class SummaryTabSection {
         innerText = innerText.split('\n')[4];
         return innerText
     }
-    //
-    async getLastKeywordText() {
+
+    async getLastKeywordBoxText() {
         return await this.modalSectionLocator.locator('li').last().innerText()
     }
 
     async getCountOfKeywords(){
         return await this.modalSectionLocator.locator('li').count()
     }
-
 }
+
+const NO_SUMMARY_AVAILABLE_IMAGE_SELECTOR = '.informative-img'
+const NO_DATA_TEXT = 'div >> nth=0'
+const NO_DATA_SORRY_TEXT = 'div >> nth=1'
+const ADD_SUMMARY_BUTTON_SELECTOR = 'button >> nth=0'
+const ADD_BRIEF_SUMMARY_AND_KEYWORDS_BUTTON_SELECTOR = 'button >> nth=1'
 
 class NoMaterialSummaryTabSection {
     constructor(lastLocator, sectionSelector) {
+        this.noMaterialSectionLocator = lastLocator.locator(sectionSelector)
+        this.noSummaryAvailableImage = this.noMaterialSectionLocator.locator(NO_SUMMARY_AVAILABLE_IMAGE_SELECTOR)
+        this.addSummaryButton = new AddButton(this.noMaterialSectionLocator, ADD_SUMMARY_BUTTON_SELECTOR)
+        this.addBriefSummaryAndKeywordsButton = new AddButton(this.noMaterialSectionLocator, ADD_BRIEF_SUMMARY_AND_KEYWORDS_BUTTON_SELECTOR)
+    }
+    async getText(){
 
     }
 }
-class CopyButton {
+
+class Button {
     constructor(lastLocator, buttonLocator) {
-        this.copyButton = lastLocator.locator(buttonLocator);
-    }
-
-
-}
-
-class EditButton {
-
-    constructor(lastLocator, buttonLocator) {
-        this.editButton = lastLocator.locator(buttonLocator);
-    }
-
-    async openModal() {
-        await this.editButton.click()
+        this.buttonLocator = lastLocator.locator(buttonLocator);
     }
 }
+    class CopyButton extends Button{
+        async copyContent() {
+            await this.buttonLocator.click()
+        }
+    }
+    class EditButton extends Button{
+        async openModal() {
+            await this.buttonLocator.click()
+        }
+    }
+    class AddButton extends Button{
+        async openModal() {
+            await this.buttonLocator.click()
+        }
+    }
+

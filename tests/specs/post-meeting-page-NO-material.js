@@ -1,8 +1,8 @@
 import {chromium, expect, test, request} from "@playwright/test";
 import {PostMeetingPage} from "../../pageObject/PostMeeting.page.js";
 
+import randomstring from "randomstring";
 import URL from "../../utils/recording-URL.js";
-import textExample from "../../utils/text-for-input.js";
 import textForInput from "../../utils/text-for-input.js";
 
 //***************************************NO MATERIAL******************************//
@@ -30,155 +30,127 @@ test.describe('Demo server', async () => {
         await postMeetingPage.header.headerlocator.waitFor({state: "visible"})
         await postMeetingPage.player.playerLocator.waitFor({state: "visible"})
         await postMeetingPage.tabs.tabPanelLocator.waitFor({state: "visible"})
-        // await postMeetingPage.
         //Add "about" or "material status" locator
         await page.screenshot({ path: "No material post-meeting-page layout.png" });
     })
 
     test("Summary tab UI : RCV-26737 : NoM", async () => {
-        await postMeetingPage.summaryTab.isActiveTab()
-
-        await postMeetingPage.addSummaryButton.waitFor({state: "visible"})
-        await postMeetingPage.addBriefSummaryAndKeywordsButton.waitFor({state: "visible"})
-        //"No material" picture is visible
-
-        await postMeetingPage.summaryTab.screenshot({ path: "No material summary tab.png" });
-    })              //TBD
+        await postMeetingPage.tabs.summaryTab.tabIsActive()
+        await postMeetingPage.tabs.summaryTab.moMaterialSection.noMaterialSectionLocator.waitFor({state: 'visible'})
+        await postMeetingPage.tabs.summaryTab.moMaterialSection.noSummaryAvailableImage.waitFor({state: 'visible'})
+        await postMeetingPage.tabs.summaryTab.moMaterialSection.addSummaryButton.buttonLocator.waitFor({state: 'visible'})
+        await postMeetingPage.tabs.summaryTab.moMaterialSection.addBriefSummaryAndKeywordsButton.buttonLocator.waitFor({state: 'visible'})
+        await postMeetingPage.tabs.tabPanelLocator.screenshot({ path: "No material summary tab.png" });
+    })
 
     test('Add brief summary and keywords functionality : RCV-26955 : NoM', async () => {
-        // const initialSummaryText = await postMeetingPage.summaryContainer.innerText()
-        //
-        // //Step#1
-        // await postMeetingPage.openEditSummaryModal()
-        //
-        // await postMeetingPage.addEditModal.textInput.fill("")
-        // await expect(postMeetingPage.addEditModal.textInput).toHaveAttribute('placeholder', 'Type your summary here...')
-        // await expect(postMeetingPage.addEditModal.counter).toHaveText( '0 / 10000')
-        // await expect(postMeetingPage.addEditModal.doneButton).toBeDisabled()
-        //
-        // //Step#2
-        // await postMeetingPage.addEditModal.textAreaInput("a", "Enter", 3)
-        // await expect(postMeetingPage.addEditModal.counter).toHaveText('6 / 10000')
-        // await expect(postMeetingPage.addEditModal.doneButton).toBeEnabled()
-        //
-        // //Step#3
-        // await postMeetingPage.addEditModal.textAreaInput("", "Enter", 22)
-        // await postMeetingPage.addEditModal.isHasScroll()
-        // await postMeetingPage.addEditModal.isCorrectMaxHeight()
-        // await expect(postMeetingPage.addEditModal.counter).toHaveText('28 / 10000')
-        //
-        // //Step#4
-        // await postMeetingPage.addEditModal.textAreaInput("", "Backspace", 23)
-        // await postMeetingPage.addEditModal.isCorrectMinHeight()
-        // await expect(postMeetingPage.addEditModal.counter).toHaveText('5 / 10000')
-        //
-        // //Step#5
-        // await postMeetingPage.addEditModal.cancelButton.click()
-        // let currentSummaryText = await postMeetingPage.summaryContainer.innerText()
-        // await expect(currentSummaryText.split('\n')[4]).toEqual(initialSummaryText.split('\n')[4])
-        //
-        // //Step#6
-        // await postMeetingPage.openEditSummaryModal()
-        //
-        // //Step#7
-        // // await postMeetingPage.addEditModal.dragDown()
-        // // await postMeetingPage.addEditModal.isCorrectMaxHeight()
-        // //Step#8
-        // // await postMeetingPage.addEditModal.dragUp()
-        // // await postMeetingPage.addEditModal.isCorrectMinHeightAfterDrag()
-        //
-        // //Step#9
-        // await postMeetingPage.addEditModal.textInput.fill("")
-        // await postMeetingPage.addEditModal.textInput.fill(textExample.longSummaryText10001)
-        // await expect(postMeetingPage.addEditModal.counter).toHaveText('10001 / 10000')
-        // await expect(postMeetingPage.addEditModal.doneButton).toBeDisabled()
-        //
-        // //Step#10-12
-        // await postMeetingPage.addEditModal.textAreaInput("", "Backspace", 1)
-        // await expect(postMeetingPage.addEditModal.counter).toHaveText('10000 / 10000')
-        // await expect(postMeetingPage.addEditModal.doneButton).toBeEnabled()
-        // await postMeetingPage.addEditModal.textInput.fill("")
-        // await postMeetingPage.addEditModal.textInput.type(textForInput.newString)
-        //
-        // //Step#11
-        // await page.mouse.click(0,0)
-        //
-        // //Step#12
-        // const newSummaryText = await postMeetingPage.addEditModal.textInput.textContent()
-        // await postMeetingPage.addEditModal.doneButton.click()
-        // await page.waitFor({timeout: 1})
-        // currentSummaryText = await postMeetingPage.summaryContainer.innerText()
-        // await expect(currentSummaryText.split('\n')[4]).toEqual(newSummaryText)
-        //
-        // await page.screenshot({ path: "RCV-27075.png" });
-    })  //TBD
+        await postMeetingPage.tabs.summaryTab.moMaterialSection.addBriefSummaryAndKeywordsButton.openModal()
+        //Step#1
+        await expect(postMeetingPage.modal.letterCounter).toHaveText( '0 / 200')
+        await expect(postMeetingPage.modal.textInput).toHaveAttribute('placeholder', 'Type your brief here...')
+        await expect(await postMeetingPage.modal.getCountOfKeywords()).toEqual(0)
+        await expect(postMeetingPage.modal.keywordBoxCounter).toHaveText(`0 / 15`)
+        await expect(postMeetingPage.modal.keywordInput).toHaveAttribute('placeholder', 'Add new keyword...')
+        await expect(postMeetingPage.modal.doneButton).toBeDisabled()
+        //Step#2-3
+        await postMeetingPage.modal.textAreaInput(`${randomstring.generate(1)}`, 'Enter', 1)
+        await postMeetingPage.modal.textAreaInput('', 'Enter', 4)
+        await postMeetingPage.modal.isHasScroll()
+        await postMeetingPage.modal.isCorrectMaxHeight(586)
+        await expect(postMeetingPage.modal.letterCounter).toHaveText('6 / 200')
+        //Step#4
+        await postMeetingPage.modal.textAreaInput("", "Backspace", 5)
+        await postMeetingPage.modal.isCorrectMinHeight(48)
+        await expect(postMeetingPage.modal.letterCounter).toHaveText('1 / 200')
+        //Step#5-6
+                                    //****
+        await postMeetingPage.modal.isVerticalResizable()
+                                    //****
+        //Step#7
+        await postMeetingPage.modal.addKeywordBox(1, `${randomstring.generate(6)}`)
+        await expect(postMeetingPage.modal.keywordBoxCounter).toHaveText(`1 / 15`)
+        await expect(postMeetingPage.modal.doneButton).toBeEnabled()
+        //Step#8
+        await postMeetingPage.modal.cancelButton.click()
+        await postMeetingPage.tabs.summaryTab.moMaterialSection.addBriefSummaryAndKeywordsButton.buttonLocator.waitFor({state: 'visible'})
+        //Step#9
+        await postMeetingPage.tabs.summaryTab.moMaterialSection.addBriefSummaryAndKeywordsButton.openModal()
+        //Step#10
+        await postMeetingPage.modal.textInput.fill(textForInput.briefSummaryText201)
+        await expect(postMeetingPage.modal.letterCounter).toHaveText('201 / 200')
+        await expect(postMeetingPage.modal.doneButton).toBeDisabled()
+        //Step#11
+        await postMeetingPage.modal.addMaxNumberOfKeywordBoxes(`${randomstring.generate(6)}`)
+        await expect(postMeetingPage.modal.keywordBoxCounter).toHaveText(`15 / 15`)
+        //Step#12
+        await postMeetingPage.modal.textAreaInput("", "Backspace", 1)
+        await expect(postMeetingPage.modal.letterCounter).toHaveText('200 / 200')
+        await expect(postMeetingPage.modal.doneButton).toBeEnabled()
+        //Step#13
+        await page.mouse.click(0,0)
+        //Step#14
+        let modalBriefSummaryText = await postMeetingPage.modal.textInput.textContent()
+        let modalLastKeywordText = await postMeetingPage.modal.getLastKeywordBoxText()
+        // await postMeetingPage.modal.doneButton.click()
+        // await postMeetingPage.modal.modalLocator.waitFor({state:'hidden'})
+        // let sectionBriefSummaryText = await postMeetingPage.tabs.summaryTab.briefSummarySection.getInnerText()
+        // let sectionLastKeywordText = await postMeetingPage.tabs.summaryTab.keywordSection.getLastKeywordBoxText()
+        // await expect(modalBriefSummaryText).toEqual(sectionBriefSummaryText)
+        // await expect(modalLastKeywordText).toEqual(sectionLastKeywordText)
+    })
 
-    test('Add summary: RCV-26949 : NoM', async () => {
-        // const initialSummaryText = await postMeetingPage.summaryContainer.innerText()
-        //
-        // //Step#1
-        // await postMeetingPage.openEditSummaryModal()
-        //
-        // await postMeetingPage.addEditModal.textInput.fill("")
-        // await expect(postMeetingPage.addEditModal.textInput).toHaveAttribute('placeholder', 'Type your summary here...')
-        // await expect(postMeetingPage.addEditModal.counter).toHaveText( '0 / 10000')
-        // await expect(postMeetingPage.addEditModal.doneButton).toBeDisabled()
-        //
-        // //Step#2
-        // await postMeetingPage.addEditModal.textAreaInput("a", "Enter", 3)
-        // await expect(postMeetingPage.addEditModal.counter).toHaveText('6 / 10000')
-        // await expect(postMeetingPage.addEditModal.doneButton).toBeEnabled()
-        //
-        // //Step#3
-        // await postMeetingPage.addEditModal.textAreaInput("", "Enter", 22)
-        // await postMeetingPage.addEditModal.isHasScroll()
+    test.only('Add summary: RCV-26949 : NoM', async () => {
+        await postMeetingPage.tabs.summaryTab.moMaterialSection.addSummaryButton.openModal()
+        //Step#1
+        await expect(postMeetingPage.modal.textInput).toHaveAttribute('placeholder', 'Type your summary here...')
+        await expect(postMeetingPage.modal.letterCounter).toHaveText( '0 / 10000')
+        await expect(postMeetingPage.modal.doneButton).toBeDisabled()
+        //Step#2
+        await postMeetingPage.modal.textAreaInput(`${randomstring.generate(1)}`, "Enter", 3)
+        await expect(postMeetingPage.modal.letterCounter).toHaveText('6 / 10000')
+        await expect(postMeetingPage.modal.doneButton).toBeEnabled()
+        //Step#3
+        await postMeetingPage.modal.textAreaInput("", "Enter", 22)
+        await postMeetingPage.modal.isHasScroll()
+        await postMeetingPage.modal.isCorrectMaxHeight(246)
+        await expect(postMeetingPage.modal.letterCounter).toHaveText('28 / 10000')
+        //Step#4
+        await postMeetingPage.modal.textAreaInput("", "Backspace", 23)
+        await postMeetingPage.modal.isCorrectMinHeight(92)
+        await expect(postMeetingPage.modal.letterCounter).toHaveText('5 / 10000')
+        //Step#5
+        await postMeetingPage.modal.cancelButton.click()
+        await postMeetingPage.tabs.summaryTab.moMaterialSection.addSummaryButton.buttonLocator.waitFor({state: 'visible'})
+        //Step#6
+        await postMeetingPage.tabs.summaryTab.moMaterialSection.addSummaryButton.openModal()
+        //Step#7
+        //****
+        await postMeetingPage.modal.isVerticalResizable()
+        //****
+        // await postMeetingPage.addEditModal.dragDown()
         // await postMeetingPage.addEditModal.isCorrectMaxHeight()
-        // await expect(postMeetingPage.addEditModal.counter).toHaveText('28 / 10000')
-        //
-        // //Step#4
-        // await postMeetingPage.addEditModal.textAreaInput("", "Backspace", 23)
-        // await postMeetingPage.addEditModal.isCorrectMinHeight()
-        // await expect(postMeetingPage.addEditModal.counter).toHaveText('5 / 10000')
-        //
-        // //Step#5
-        // await postMeetingPage.addEditModal.cancelButton.click()
-        // let currentSummaryText = await postMeetingPage.summaryContainer.innerText()
-        // await expect(currentSummaryText.split('\n')[4]).toEqual(initialSummaryText.split('\n')[4])
-        //
-        // //Step#6
-        // await postMeetingPage.openEditSummaryModal()
-        //
-        // //Step#7
-        // // await postMeetingPage.addEditModal.dragDown()
-        // // await postMeetingPage.addEditModal.isCorrectMaxHeight()
-        // //Step#8
-        // // await postMeetingPage.addEditModal.dragUp()
-        // // await postMeetingPage.addEditModal.isCorrectMinHeightAfterDrag()
-        //
-        // //Step#9
-        // await postMeetingPage.addEditModal.textInput.fill("")
-        // await postMeetingPage.addEditModal.textInput.fill(textExample.longSummaryText10001)
-        // await expect(postMeetingPage.addEditModal.counter).toHaveText('10001 / 10000')
-        // await expect(postMeetingPage.addEditModal.doneButton).toBeDisabled()
-        //
-        // //Step#10-12
-        // await postMeetingPage.addEditModal.textAreaInput("", "Backspace", 1)
-        // await expect(postMeetingPage.addEditModal.counter).toHaveText('10000 / 10000')
-        // await expect(postMeetingPage.addEditModal.doneButton).toBeEnabled()
-        // await postMeetingPage.addEditModal.textInput.fill("")
-        // await postMeetingPage.addEditModal.textInput.type(textForInput.newString)
-        //
-        // //Step#11
-        // await page.mouse.click(0,0)
-        //
-        // //Step#12
-        // const newSummaryText = await postMeetingPage.addEditModal.textInput.textContent()
-        // await postMeetingPage.addEditModal.doneButton.click()
-        // await page.waitFor({timeout: 1})
-        // currentSummaryText = await postMeetingPage.summaryContainer.innerText()
-        // await expect(currentSummaryText.split('\n')[4]).toEqual(newSummaryText)
-        //
-        // await page.screenshot({ path: "RCV-27075.png" });
-    })  //TBD
+        //Step#8
+        // await postMeetingPage.addEditModal.dragUp()
+        // await postMeetingPage.addEditModal.isCorrectMinHeightAfterDrag()
+        //Step#9
+        await postMeetingPage.modal.textInput.fill(textForInput.longSummaryText10001)
+        await expect(postMeetingPage.modal.letterCounter).toHaveText( '10001 / 10000')
+        await expect(postMeetingPage.modal.doneButton).toBeDisabled()
+        //Step#10-12
+        await postMeetingPage.modal.textAreaInput("", "Backspace", 1)
+        await expect(postMeetingPage.modal.letterCounter).toHaveText('10000 / 10000')
+        await expect(postMeetingPage.modal.doneButton).toBeEnabled()
+        await postMeetingPage.modal.textInput.fill("")
+        await postMeetingPage.modal.textInput.fill(`${randomstring.generate(25)}`)
+        //Step#11
+        await page.mouse.click(0,0)
+        //Step#12
+        let modalSummaryText = await postMeetingPage.modal.textInput.textContent()
+        // await postMeetingPage.modal.doneButton.click()
+        // await postMeetingPage.modal.modalLocator.waitFor({state:'hidden'})
+        // let sectionSummaryText = await postMeetingPage.tabs.summaryTab.summarySection.getInnerText()
+        // await expect(sectionSummaryText).toEqual(modalSummaryText)
+        // await page.screenshot({ path: "RCV-26949.png" });
+    })
 
 })

@@ -16,11 +16,12 @@ export class Modal {
         this.cancelButton = this.modalLocator.locator(CANCEL_BUTTON_SELECTOR)
         this.doneButton = this.modalLocator.locator(DONE_BUTTON_SELECTOR)
         this.textInput = this.modalLocator.locator(TEXT_INPUT_SELECTOR)
-        this.letterCounter = this.modalLocator.locator(LETTER_COUNTER_SELECTOR)
+        this.letterCounter = this.modalLocator.locator(LETTER_COUNTER_SELECTOR).first()
         this.editedSign = new EditedSign(this.modalLocator, EDITED_SIGN_SELECTOR)
         this.viewportHeight = lastLocator.viewportSize().height
 
         this.keywordBox = this.modalLocator.locator(EXISTING_KEYWORD_SELECTOR)
+        this.keywordBoxCounter = this.modalLocator.locator(LETTER_COUNTER_SELECTOR).last()
         this.keywordBoxInput = this.modalLocator.locator(EXISTING_KEYWORD_INPUT_SELECTOR).last()
         this.keywordInput = this.modalLocator.locator(KEYWORDS_INPUT_SELECTOR).last()
     }
@@ -38,7 +39,6 @@ export class Modal {
         await expect.soft(eleClientHeight < eleScrollHeight, 'We have problem with scroll appearance').toBeTruthy()
     }
 
-
     /**
      * max-height = calc(100vh - numberForCalculation);
      *
@@ -49,17 +49,30 @@ export class Modal {
      *@returns {Promise<void>}
      */
     async isCorrectMaxHeight(numberForCalculation) {
-        let eleClientHeight = await this.textInput.evaluate(node => node.clientHeight)
-        let eleCorrectHeight = await (this.viewportHeight - numberForCalculation) //разница в 2 px
+        let eleClientHeight = await this.textInput.evaluate(node => node.offsetHeight)
+        let eleCorrectHeight = await (this.viewportHeight - numberForCalculation)
         await expect.soft(eleClientHeight, 'We have problem with modal height').toEqual(eleCorrectHeight)
+        if(eleCorrectHeight !== eleClientHeight) {
+            const difference = eleCorrectHeight - eleClientHeight
+            console.log('Difference ' + difference + ' px');
+        }
     }
     async isCorrectMinHeight(height) {
-        let eleClientHeight = await this.textInput.evaluate(node => node.clientHeight)
+        let eleClientHeight = await this.textInput.evaluate(node => node.offsetHeight)
         await expect.soft(eleClientHeight, 'We have problem with modal height').toEqual(height)
+        if(eleClientHeight !== height) {
+            const difference = height - eleClientHeight
+            console.log('Difference ' + difference + ' px');
+        }
     }
     async getCountOfKeywords(){                                     //ЭТОТ МЕТОД МОЖЕТ БЫТЬ ОШИБОЧНО ВЫЗВАН ИЗ ДРУГОЙ МОДАЛКИ
         return await this.modalLocator.locator(EXISTING_KEYWORD_SELECTOR).count()
     }
+
+    async getLastKeywordBoxText(){
+        return await this.keywordBoxInput.inputValue()
+    }
+
     async deleteKeywordBoxes(numberOfBoxes){
         for (let i = 0; i < numberOfBoxes; i++) {
             await this.keywordBox.last().locator('button').click()
@@ -71,7 +84,15 @@ export class Modal {
             await this.keywordBox.last().locator('button').click()
         }
     }
-    async addKeywordBoxes(textForKeywords){
+
+    async addKeywordBox(number, textForKeywords){
+        for(let i = 0; i < number; i++){
+            await this.keywordInput.fill(textForKeywords)
+            await this.keywordInput.press('Enter')
+        }
+    }
+
+    async addMaxNumberOfKeywordBoxes(textForKeywords){
         if(await this.keywordInput.isDisabled()) await this.deleteKeywordBoxes(1)
         while(await this.keywordInput.isEditable()){
             await this.keywordInput.fill(textForKeywords)
@@ -79,7 +100,9 @@ export class Modal {
         }
     }
 
-
+    async isVerticalResizable(){
+        await expect(this.textInput).toHaveCSS('resize', 'vertical')
+    }
 
     // async isCorrectMinHeightAfterDrag() {
     //     let eleClientHeight = await this.textInput.evaluate(node => node.clientHeight)

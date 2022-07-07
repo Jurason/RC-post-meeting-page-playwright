@@ -9,6 +9,7 @@ async function globalSetup(config) {
     await login.login()
     await page.context().storageState({ path: storageState });
     await browser.close();
+
 }
 
 export default globalSetup;

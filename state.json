@@ -13,7 +13,7 @@
     {
       "sameSite": "None",
       "name": "PLA_SESSION",
-      "value": "876960434119326777",
+      "value": "6842945599562609911",
       "domain": "login.ringcentral.com",
       "path": "/",
       "expires": -1,
@@ -33,7 +33,7 @@
     {
       "sameSite": "None",
       "name": "CSRFTOKEN",
-      "value": "1JNt3kZe0AXs6s3TvEE30gFMA70IV1Sl",
+      "value": "2Pz49KVB93ri25c5EXL4mIacoI0GbEBT",
       "domain": "login.ringcentral.com",
       "path": "/",
       "expires": -1,
@@ -53,20 +53,20 @@
     {
       "sameSite": "None",
       "name": "io_token_7c6a6574-f011-4c9a-abdd-9894a102ccef",
-      "value": "RPBEt+16x8O7QvWq2+5SifWqEzH4LIhZ0O3RSB0f4Us=",
+      "value": "eFbtIMBjzfSIHele/7ejmgk7o5Jh37ck2wA30+AbAgc=",
       "domain": "mpsnare.iesnare.com",
       "path": "/",
-      "expires": 1688113368.909092,
+      "expires": 1688717944.608043,
       "httpOnly": true,
       "secure": true
     },
     {
       "sameSite": "None",
       "name": "s_vi",
-      "value": "[CS]v1|315EAEAD358628FE-600001FBC0CBED72[CE]",
+      "value": "[CS]v1|31634B7CC43781BC-600010CEA3F69DC2[CE]",
       "domain": ".ringcentral.112.2o7.net",
       "path": "/",
-      "expires": 1719649369.802343,
+      "expires": 1720253946.00084,
       "httpOnly": false,
       "secure": true
     },
@@ -83,7 +83,7 @@
     {
       "sameSite": "None",
       "name": "RCAuthSession",
-      "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ7XCJybFwiOmZhbHNlLFwicnRmXCI6ZmFsc2UsXCJyY1wiOnRydWUsXCJ1blwiOlwidmFsa2VhcmVAaW5ib3gucnVcIixcImFpZFwiOlwiMjk0NjMzNzAyMFwiLFwiZWlkXCI6XCIzMjIxMjkzMDIwXCIsXCJiaWRcIjpcIjEyMTBcIixcImN0XCI6XCJQYXNzd29yZFwiLFwiYXRcIjpcImV5SnJhV1FpT2lJNE56WXlaalU1T0dRd05UazBOR1JpT0RaaVpqVmpZVGszT0RBME56WXdPQ0lzSW5SNWNDSTZJa3BYVkNJc0ltRnNaeUk2SWxKVE1qVTJJbjAuZXlKemRXSWlPaUl6TWpJeE1qa3pNREl3SWl3aWFYTnpJam9pYUhSMGNITTZYQzljTDNCc1lYUm1iM0p0TG5KcGJtZGpaVzUwY21Gc0xtTnZiU0lzSW1sa2JHVmZkR2x0WlNJNk1UWTFOall3TmpFM01pd2lZbkpoYm1SZmFXUWlPaUl4TWpFd0lpd2ljMmxrSWpvaU1UUTBNR0U1WTJRdFptSTNaUzAwTWpWbExUa3lOR1V0WlRrNU5qUTRNV1UxWmpBM0lpd2lZWFZrSWpvaWVWQlNXVmxRVDBsUlVWZDVNMjlDY0ZKalVVbFJRU0lzSW1OeVpXUmxiblJwWVd4ZmRIbHdaU0k2SWxCaGMzTjNiM0prSWl3aVlXTmpiM1Z1ZEY5cFpDSTZJakk1TkRZek16Y3dNakFpTENKaGRYUm9YM1JwYldVaU9qRTJOVFkxTnpjek56RXNJbWxoZENJNk1UWTFOalUzTnpNM01pd2ljMlZzWmw5emFXZHVaV1FpT21aaGJITmxMQ0pxZEdraU9pSmtNemsyTkRZellTMDJNMlE1TFRRNU9EQXRPVFUxTlMwM01qQTVPR1ZsWWpaaE1UVWlmUS5ablgxaC16UDdIYWJyM2ljVlpUcGVZQ2JoSlNnblRVZUkwazY2RE00NVhRMnRtdEdRRGxRS1NEUTF6UVNsc2syUjhzaVRCLXpfWHJhTDR2ZnlFSWhMaU1MT1B5QjNlbkJyTnVUU1ZrWFZqT3pFZjhhZDdEWDNpY1VOOFI1MVMxc005X2RXY0ZDVF9WMU9DR2tCUmJadFpOZmtWMHh0QmlYT19TTW50bFV0RlhZN2g3MExKNDFTS1doSWU2cVE2TmN6ZUo3X3FHUkpZaUUyY0c0bWxGZDBtNXc2QjhPRW5nQUp3UHlYYVgzQnk0cFNId3JPRE1lLUt1Y1h0Q01sanZqQlVpUTE5dkgwRTB0QmNHWk80clRlYVZaMUpTNDFJdnBYRUpMYnRXandHQnBQRjNNUjNEVF9GalJhMUZ3T2gxRFJjUU1kTVNTdG9OQ0JyN2J3eWdMV1FcIixcImFsXCI6dHJ1ZSxcInJ0cFwiOlwiY29kZVwiLFwic2NcIjpcIlwiLFwibGF0XCI6MTY1NjU3NzM3MTg1NSxcImdhXCI6ZmFsc2UsXCJjZWFcIjp0cnVlLFwiY2NcIjpcIlwiLFwiY2NtXCI6XCJcIixcInBkXCI6dHJ1ZX0ifQ.EEW8imk71xJmtgDDn71Q-VBXva1-GD5pKsuX8RLA0xo",
+      "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ7XCJybFwiOmZhbHNlLFwicnRmXCI6ZmFsc2UsXCJyY1wiOnRydWUsXCJ1blwiOlwidmFsa2VhcmVAaW5ib3gucnVcIixcImFpZFwiOlwiMjk0NjMzNzAyMFwiLFwiZWlkXCI6XCIzMjIxMjkzMDIwXCIsXCJiaWRcIjpcIjEyMTBcIixcImN0XCI6XCJQYXNzd29yZFwiLFwiYXRcIjpcImV5SnJhV1FpT2lJNE56WXlaalU1T0dRd05UazBOR1JpT0RaaVpqVmpZVGszT0RBME56WXdPQ0lzSW5SNWNDSTZJa3BYVkNJc0ltRnNaeUk2SWxKVE1qVTJJbjAuZXlKemRXSWlPaUl6TWpJeE1qa3pNREl3SWl3aWFYTnpJam9pYUhSMGNITTZYQzljTDNCc1lYUm1iM0p0TG5KcGJtZGpaVzUwY21Gc0xtTnZiU0lzSW1sa2JHVmZkR2x0WlNJNk1UWTFOekl4TURjME55d2lZbkpoYm1SZmFXUWlPaUl4TWpFd0lpd2ljMmxrSWpvaU56VXlOVEZsTXpVdFlqQmhNeTAwWm1FNUxXRXlaR1F0WVdRMU9HVXdaVFF4TlRneklpd2lZWFZrSWpvaWVWQlNXVmxRVDBsUlVWZDVNMjlDY0ZKalVVbFJRU0lzSW1OeVpXUmxiblJwWVd4ZmRIbHdaU0k2SWxCaGMzTjNiM0prSWl3aVlXTmpiM1Z1ZEY5cFpDSTZJakk1TkRZek16Y3dNakFpTENKaGRYUm9YM1JwYldVaU9qRTJOVGN4T0RFNU5EWXNJbWxoZENJNk1UWTFOekU0TVRrME55d2ljMlZzWmw5emFXZHVaV1FpT21aaGJITmxMQ0pxZEdraU9pSmpNbUppWlRnd01pMDVZakZqTFRReE5qRXRZakl3WVMxaE1ESTBORGt3TnprMlptWWlmUS5QTTZCX21sbzU5bXJpem5YV1AwSUpqS2NOVHVBQ2pxS3RLYmQxTGZFZHA1cTBmREtER000YzBkRl9vWG9pRzVXV0kzTE0zTjZhd3dmN3pDNVc2eE54ZHhJRzdXRW5JblMtbUJ3QWtqa3hjOVg3ck9wRm1IdFJ1bXczemtEdVJDemVwaTVwV0dOek94NVk4eHRQU1IyNGlaLU13TmtIcU9KeUp2WnlTM0RTT0l0Z0hIeUR3VThTcmNiaG95VC1fMFFZekZoTVJ3MVlMbzlweTJOdEdXN0JkRkNGbW10RlQxV25xQVc4dmlKblQ3NXJTUlhnOVFHSnRQaVZHVkpFUmpDTVRaY1MtbHd6eGt2TXR5Y25hZHYySWdvZWRTdDVnM1ZhRmlSYUxhM29Sa3pWTUFtVEZlb3hKTTM2WjhndVZmc2YySkYtajZDZzdGbDU3cUQyd2xhT2dcIixcImFsXCI6dHJ1ZSxcInJ0cFwiOlwiY29kZVwiLFwic2NcIjpcIlwiLFwibGF0XCI6MTY1NzE4MTk0NjI5NyxcImdhXCI6ZmFsc2UsXCJjZWFcIjp0cnVlLFwiY2NcIjpcIlwiLFwiY2NtXCI6XCJcIixcInBkXCI6dHJ1ZX0ifQ.9ljkrca1nDQ23pkt0wgfnQ-QFHCaR2YFTrd9WuCGOpQ",
       "domain": "login.ringcentral.com",
       "path": "/",
       "expires": -1,
@@ -109,7 +109,7 @@
         },
         {
           "name": "guestEndpointId",
-          "value": "\"056a10d3-013b-4310-b42e-41b220c1552c\""
+          "value": "\"e681c033-eaab-4a59-a47d-17f9a162023e\""
         },
         {
           "name": "displayName",
@@ -141,7 +141,7 @@
         },
         {
           "name": "ld:$anonUserId",
-          "value": "cf14cd60-f84d-11ec-acc4-678dd8c3b192"
+          "value": "6ffd5880-fdcd-11ec-9354-11a3d9939552"
         },
         {
           "name": "defaultProvider",
@@ -189,7 +189,7 @@
         },
         {
           "name": "rc-platform",
-          "value": "{\"token_type\":\"\",\"access_token\":\"\",\"expire_time\":1656577363394,\"expires_in\":\"-1\",\"refresh_token\":\"\",\"refresh_token_expires_in\":\"\",\"refresh_token_expire_time\":0,\"scope\":\"\"}"
+          "value": "{\"token_type\":\"\",\"access_token\":\"\",\"expire_time\":1657181936453,\"expires_in\":\"-1\",\"refresh_token\":\"\",\"refresh_token_expires_in\":\"\",\"refresh_token_expire_time\":0,\"scope\":\"\"}"
         },
         {
           "name": "splitterPosition",
@@ -197,13 +197,17 @@
         },
         {
           "name": "ld:5efa23d1bc3c320bb20f071a:$diagnostics",
-          "value": "{\"dataSinceDate\":1656577362743,\"droppedEvents\":0,\"eventsInLastBatch\":0,\"streamInits\":[]}"
+          "value": "{\"dataSinceDate\":1657181935367,\"droppedEvents\":0,\"eventsInLastBatch\":0,\"streamInits\":[]}"
         }
       ]
     },
     {
       "origin": "https://login.ringcentral.com",
       "localStorage": [
+        {
+          "name": "segmentio.2fd9899a-825d-4c0a-baae-6eed374a2c01.ack",
+          "value": "1657181948718"
+        },
         {
           "name": "ajs_group_id",
           "value": "null"
@@ -213,20 +217,20 @@
           "value": "localStorageAvailabilityTest"
         },
         {
-          "name": "segmentio.e6996fd2-1491-4e4e-835e-7a0ae5069012.ack",
-          "value": "1656577372917"
-        },
-        {
           "name": "ajs_user_id",
           "value": "null"
         },
         {
-          "name": "segmentio.e6996fd2-1491-4e4e-835e-7a0ae5069012.reclaimEnd",
+          "name": "segmentio.2fd9899a-825d-4c0a-baae-6eed374a2c01.reclaimStart",
           "value": "null"
         },
         {
           "name": "mp_36746603ab0a430483b3b23e8b476a10_mixpanel",
-          "value": "{\"distinct_id\": \"181b3b4a3d8848-01a59dd557acac-1133069-e1000-181b3b4a3d9d1a\",\"$device_id\": \"181b3b4a3d8848-01a59dd557acac-1133069-e1000-181b3b4a3d9d1a\",\"mp_lib\": \"Segment: web\",\"$initial_referrer\": \"$direct\",\"$initial_referring_domain\": \"$direct\"}"
+          "value": "{\"distinct_id\": \"181d7bdbc5017-0ca7f1765b33b8-1133069-e1000-181d7bdbc51377\",\"$device_id\": \"181d7bdbc5017-0ca7f1765b33b8-1133069-e1000-181d7bdbc51377\",\"mp_lib\": \"Segment: web\",\"$initial_referrer\": \"$direct\",\"$initial_referring_domain\": \"$direct\"}"
+        },
+        {
+          "name": "segmentio.2fd9899a-825d-4c0a-baae-6eed374a2c01.queue",
+          "value": "[]"
         },
         {
           "name": "ajs_group_properties",
@@ -241,24 +245,20 @@
           "value": "valkeare@inbox.ru"
         },
         {
-          "name": "io_temp",
-          "value": "RPBEt+16x8O7QvWq2+5SifWqEzH4LIhZ0O3RSB0f4Us="
+          "name": "segmentio.2fd9899a-825d-4c0a-baae-6eed374a2c01.reclaimEnd",
+          "value": "null"
         },
         {
-          "name": "segmentio.e6996fd2-1491-4e4e-835e-7a0ae5069012.reclaimStart",
-          "value": "null"
+          "name": "segmentio.2fd9899a-825d-4c0a-baae-6eed374a2c01.inProgress",
+          "value": "{}"
+        },
+        {
+          "name": "io_temp",
+          "value": "eFbtIMBjzfSIHele/7ejmgk7o5Jh37ck2wA30+AbAgc="
         },
         {
           "name": "debug",
           "value": "undefined"
-        },
-        {
-          "name": "segmentio.e6996fd2-1491-4e4e-835e-7a0ae5069012.inProgress",
-          "value": "{}"
-        },
-        {
-          "name": "segmentio.e6996fd2-1491-4e4e-835e-7a0ae5069012.queue",
-          "value": "[]"
         }
       ]
     }

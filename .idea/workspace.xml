@@ -5,24 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d55a8382-469e-4cce-8fd3-4dfec3886aa2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/No material post-meeting-page layout.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/No material summary tab.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Full material post-meeting-page layout.png" beforeDir="false" afterPath="$PROJECT_DIR$/Full material post-meeting-page layout.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Full material summary tab.png" beforeDir="false" afterPath="$PROJECT_DIR$/Full material summary tab.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RCV-26956.png" beforeDir="false" afterPath="$PROJECT_DIR$/RCV-26956.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RCV-26957.png" beforeDir="false" afterPath="$PROJECT_DIR$/RCV-26957.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RCV-27075.png" beforeDir="false" afterPath="$PROJECT_DIR$/RCV-27075.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pageObject/Login.page.js" beforeDir="false" afterPath="$PROJECT_DIR$/pageObject/Login.page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pageObject/pageElements/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/pageObject/pageElements/header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pageObject/pageElements/modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/pageObject/pageElements/modal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pageObject/pageElements/player.js" beforeDir="false" afterPath="$PROJECT_DIR$/pageObject/pageElements/player.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pageObject/pageElements/tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/pageObject/pageElements/tabs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pageObject/test/test.marketplace.page.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/test/test.marketplace.page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pageObject/test/test.page.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/test/test.page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/playwright.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/playwright.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/state.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/state.json" beforeDir="false" afterPath="$PROJECT_DIR$/state.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/specs/post-meeting-page-NO-material.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/specs/post-meeting-page-NO-material.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/specs/post-meeting-page-full-material.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/specs/post-meeting-page-full-material.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test.example.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test.example.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/global-setup.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/global-setup.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/login-data.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/login-data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/recording-URL.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/recording-URL.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/text-for-input.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/text-for-input.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,25 +61,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/djon/WebstormProjects/Playwright_test&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs.jest.jest_package&quot;: &quot;&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2022.1\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/djon/WebstormProjects/Playwright_test",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs.jest.jest_package": "",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.editor",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2022.1\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\djon\WebstormProjects\Playwright_test\pageObject" />
@@ -152,6 +155,10 @@
       <workItem from="1656331595265" duration="5048000" />
       <workItem from="1656424720640" duration="8082000" />
       <workItem from="1656527894863" duration="14748000" />
+      <workItem from="1656751554979" duration="28992000" />
+      <workItem from="1656874507111" duration="25660000" />
+      <workItem from="1656949759461" duration="533000" />
+      <workItem from="1656952702368" duration="64340000" />
     </task>
     <servers />
   </component>
@@ -176,9 +183,15 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/pageObject/pageElements/header.js</url>
+          <line>7</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/pageObject/pageElements/modal.js</url>
           <line>22</line>
-          <option name="timeStamp" value="1" />
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

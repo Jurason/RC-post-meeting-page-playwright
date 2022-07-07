@@ -1,11 +1,12 @@
-import {chromium, expect, test, request} from "@playwright/test";
+import { expect, test } from "@playwright/test";
 import {PostMeetingPage} from "../../pageObject/PostMeeting.page.js";
 
 import URL from "../../utils/recording-URL.js";
-import textExample from "../../utils/text-for-input.js";
 import textForInput from "../../utils/text-for-input.js";
+import randomstring from "randomstring";
 
-test.describe('Demo server', async () => {
+
+test.describe('Full material functional tests. Demo server', async () => {
 
     let page;
     let postMeetingPage;
@@ -14,7 +15,6 @@ test.describe('Demo server', async () => {
         const context = await browser.newContext()
         page = await context.newPage()
         await page.goto(URL.fullMaterialRecordingDemo)
-                                            //need to fix. maybe https://playwright.dev/docs/auth#session-storage
         await page.locator('button', {hasText: "Continue"}).click()
         await page.locator("button.btn.btn-primary").click()
         await page.locator("button.btn.btn-primary").click()
@@ -53,17 +53,17 @@ test.describe('Demo server', async () => {
         await expect(postMeetingPage.modal.letterCounter).toHaveText( '0 / 10000')
         await expect(postMeetingPage.modal.doneButton).toBeDisabled()
         //Step#2
-        await postMeetingPage.modal.textAreaInput("a", "Enter", 3)
+        await postMeetingPage.modal.textAreaInput(`${randomstring.generate(1)}`, "Enter", 3)
         await expect(postMeetingPage.modal.letterCounter).toHaveText('6 / 10000')
         await expect(postMeetingPage.modal.doneButton).toBeEnabled()
         //Step#3
         await postMeetingPage.modal.textAreaInput("", "Enter", 22)
         await postMeetingPage.modal.isHasScroll()
-        await postMeetingPage.modal.isCorrectMaxHeight(248)
+        await postMeetingPage.modal.isCorrectMaxHeight(246)
         await expect(postMeetingPage.modal.letterCounter).toHaveText('28 / 10000')
         //Step#4
         await postMeetingPage.modal.textAreaInput("", "Backspace", 23)
-        await postMeetingPage.modal.isCorrectMinHeight(90)
+        await postMeetingPage.modal.isCorrectMinHeight(92)
         await expect(postMeetingPage.modal.letterCounter).toHaveText('5 / 10000')
         //Step#5
         await postMeetingPage.modal.cancelButton.click()
@@ -72,14 +72,18 @@ test.describe('Demo server', async () => {
         //Step#6
         await postMeetingPage.tabs.summaryTab.summarySection.editButton.openModal()
         //Step#7
+                                //****
+        await postMeetingPage.modal.isVerticalResizable()
+                                //****
         // await postMeetingPage.addEditModal.dragDown()
         // await postMeetingPage.addEditModal.isCorrectMaxHeight()
         //Step#8
         // await postMeetingPage.addEditModal.dragUp()
         // await postMeetingPage.addEditModal.isCorrectMinHeightAfterDrag()
+
         //Step#9
         await postMeetingPage.modal.textInput.fill("")
-        await postMeetingPage.modal.textInput.fill(textExample.longSummaryText10001)
+        await postMeetingPage.modal.textInput.fill(textForInput.longSummaryText10001)
         await expect(postMeetingPage.modal.letterCounter).toHaveText( '10001 / 10000')
         await expect(postMeetingPage.modal.doneButton).toBeDisabled()
         //Step#10-12
@@ -87,7 +91,7 @@ test.describe('Demo server', async () => {
         await expect(postMeetingPage.modal.letterCounter).toHaveText('10000 / 10000')
         await expect(postMeetingPage.modal.doneButton).toBeEnabled()
         await postMeetingPage.modal.textInput.fill("")
-        await postMeetingPage.modal.textInput.fill(textForInput.newString)
+        await postMeetingPage.modal.textInput.fill(`${randomstring.generate(25)}`)
         //Step#11
         await page.mouse.click(0,0)
         //Step#12
@@ -119,7 +123,7 @@ test.describe('Demo server', async () => {
         await expect(postMeetingPage.modal.letterCounter).toHaveText('6 / 200')
         //Step#5
         await postMeetingPage.modal.textAreaInput("", "Backspace", 5)
-        await postMeetingPage.modal.isCorrectMinHeight(46)
+        await postMeetingPage.modal.isCorrectMinHeight(48)
         await expect(postMeetingPage.modal.letterCounter).toHaveText('1 / 200')
         //Step#6
         await postMeetingPage.modal.cancelButton.click()
@@ -128,12 +132,12 @@ test.describe('Demo server', async () => {
 
         //Step#7
         await postMeetingPage.tabs.summaryTab.briefSummarySection.editButton.openModal()
-        //Step#8
-            //*******
-        //Step#9
-            //*******
+        //Step#8-9
+                                //****
+        await postMeetingPage.modal.isVerticalResizable()
+                                //****
         //Step#10
-        await postMeetingPage.modal.textInput.fill(textExample.briefSummaryText201)
+        await postMeetingPage.modal.textInput.fill(textForInput.briefSummaryText201)
         await expect(postMeetingPage.modal.letterCounter).toHaveText('201 / 200')
         await expect(postMeetingPage.modal.doneButton).toBeDisabled()
         //Step#11
@@ -141,7 +145,7 @@ test.describe('Demo server', async () => {
         await expect(postMeetingPage.modal.letterCounter).toHaveText('200 / 200')
         await expect(postMeetingPage.modal.doneButton).toBeEnabled()
         await postMeetingPage.modal.textInput.fill("")
-        await postMeetingPage.modal.textInput.fill(textForInput.newString)
+        await postMeetingPage.modal.textInput.fill(`${randomstring.generate(15)}`)
         //Step#12
         await page.mouse.click(0,0)
         //Step#13
@@ -154,11 +158,11 @@ test.describe('Demo server', async () => {
     })
 
     test('Edit keywords functionality : RCV-26957 : FM', async () => {                      //TBD
-        const initialLastKeywordText = await postMeetingPage.tabs.summaryTab.keywordSection.getLastKeywordText()
+        const initialLastKeywordText = await postMeetingPage.tabs.summaryTab.keywordSection.getLastKeywordBoxText()
         const countOfKeywords = await postMeetingPage.tabs.summaryTab.keywordSection.getCountOfKeywords()
         //Step#1
         await postMeetingPage.tabs.summaryTab.keywordSection.editButton.openModal()
-        await expect(postMeetingPage.modal.letterCounter).toHaveText(`${countOfKeywords} / 15`)
+        await expect(postMeetingPage.modal.keywordBoxCounter).toHaveText(`${countOfKeywords} / 15`)
         await expect(postMeetingPage.modal.doneButton).toBeDisabled()
         //Step#2
         await postMeetingPage.modal.deleteKeywordBoxes(1)
@@ -166,15 +170,14 @@ test.describe('Demo server', async () => {
         await expect(postMeetingPage.modal.doneButton).toBeEnabled()
         //Step#3
         await postMeetingPage.modal.cancelButton.click()
-        let currentLastKeywordText = await postMeetingPage.tabs.summaryTab.keywordSection.getLastKeywordText()
+        let currentLastKeywordText = await postMeetingPage.tabs.summaryTab.keywordSection.getLastKeywordBoxText()
 
-        await expect.soft(initialLastKeywordText).toEqual(currentLastKeywordText)
+        await expect(initialLastKeywordText).toEqual(currentLastKeywordText)
         //Step#4
         await postMeetingPage.tabs.summaryTab.keywordSection.editButton.openModal()
         //Step#5
-
-        await postMeetingPage.modal.addKeywordBoxes(textForInput.newString)
-        await expect(postMeetingPage.modal.letterCounter).toHaveText(`15 / 15`)
+        await postMeetingPage.modal.addMaxNumberOfKeywordBoxes(`${randomstring.generate(8)}`)
+        await expect(postMeetingPage.modal.keywordBoxCounter).toHaveText(`15 / 15`)
         await expect(postMeetingPage.modal.doneButton).toBeEnabled()
         //Step#6
         await page.mouse.click(0,0)
@@ -182,8 +185,8 @@ test.describe('Demo server', async () => {
         let newLastKeywordText = await postMeetingPage.modal.keywordBoxInput.inputValue()
         await postMeetingPage.modal.doneButton.click()
         await postMeetingPage.modal.modalLocator.waitFor({state:'hidden'})
-        currentLastKeywordText = await postMeetingPage.tabs.summaryTab.keywordSection.getLastKeywordText()
-        await expect.soft(currentLastKeywordText).toEqual(newLastKeywordText)
+        currentLastKeywordText = await postMeetingPage.tabs.summaryTab.keywordSection.getLastKeywordBoxText()
+        await expect(currentLastKeywordText).toEqual(newLastKeywordText)
         await page.screenshot({ path: "RCV-26957.png" });
     })
 })

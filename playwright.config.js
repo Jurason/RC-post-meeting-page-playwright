@@ -3,10 +3,10 @@ import { devices } from '@playwright/test';
 
 const config = {
   // testDir: './tests/specs',
-  testMatch: 'post-meeting-page-full-material.js',
-  // testMatch: 'post-meeting-page-NO-material.js',
+  // testMatch: 'post-meeting-page-full-material.js',
+  testMatch: 'post-meeting-page-NO-material.js',
   // testMatch: 'test.example.js',
-  timeout: 240 * 1000,
+  timeout: 300 * 1000,
   expect: {
     timeout: 5000
   },
@@ -18,12 +18,14 @@ const config = {
   workers: 1,
   reporter: 'html',
   use: {
-    headless: false,
+    headless: true,
     actionTimeout: 0,
     storageState: './state.json',
     permissions: ['camera', 'microphone'],
     // baseURL: 'https://demo-ai-wi.lab.nordigy.ru/welcome',
     trace: 'on-first-retry',
+    extraHTTPHeaders: {
+    }
   },
   projects: [
     {
