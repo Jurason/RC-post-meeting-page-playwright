@@ -1,4 +1,5 @@
 import {expect} from "@playwright/test";
+import {Button} from "../pageElements/tabs.js";
 
 const PLAYER_HEADER = '.PlayerHeader'
 const PLAYER_FOOTER = '.PlayerFooter'
@@ -19,9 +20,16 @@ class PlayerHeader {
         this.highlightstab = new PLayerTab(this.playerHeaderLocator, PLAYER_HEADER_HIGHLIGHTS_TAB)
     }
 }
+
+const PLAYER_PROGRESS_SELECTOR = '.PlayerProgress'
+const PLAY_BUTTON_SELECTOR = '.PlayerButton >> nth=0'
+
+
 class PlayerFooter {
     constructor(lastLocator, footerSelector) {
         this.playerFooterLocator = lastLocator.locator(footerSelector)
+        this.playButton = new Button(this.playerFooterLocator, PLAY_BUTTON_SELECTOR)
+
     }
 }
 class PLayerTab {

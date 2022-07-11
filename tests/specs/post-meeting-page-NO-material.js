@@ -26,7 +26,7 @@ test.describe('Demo server', async () => {
         postMeetingPage = await new PostMeetingPage(page)
     })
 
-    test("Post meeting page UI : RCV-25017 : NoM", async () => {
+    test('Post meeting page UI : RCV-25017 : NoM', async () => {
         await postMeetingPage.header.headerlocator.waitFor({state: "visible"})
         await postMeetingPage.player.playerLocator.waitFor({state: "visible"})
         await postMeetingPage.tabs.tabPanelLocator.waitFor({state: "visible"})
@@ -34,13 +34,27 @@ test.describe('Demo server', async () => {
         await page.screenshot({ path: "No material post-meeting-page layout.png" });
     })
 
-    test("Summary tab UI : RCV-26737 : NoM", async () => {
+    test('Summary tab UI : RCV-26737 : NoM', async () => {
         await postMeetingPage.tabs.summaryTab.tabIsActive()
         await postMeetingPage.tabs.summaryTab.moMaterialSection.noMaterialSectionLocator.waitFor({state: 'visible'})
-        await postMeetingPage.tabs.summaryTab.moMaterialSection.noSummaryAvailableImage.waitFor({state: 'visible'})
+        await postMeetingPage.tabs.summaryTab.moMaterialSection.imageNoSummaryAvailable.waitFor({state: 'visible'})
         await postMeetingPage.tabs.summaryTab.moMaterialSection.addSummaryButton.buttonLocator.waitFor({state: 'visible'})
         await postMeetingPage.tabs.summaryTab.moMaterialSection.addBriefSummaryAndKeywordsButton.buttonLocator.waitFor({state: 'visible'})
         await postMeetingPage.tabs.tabPanelLocator.screenshot({ path: "No material summary tab.png" });
+    })
+
+    test('Transcript tab UI : RCV-26745 : NoM', async () => {
+        await postMeetingPage.tabs.transcriptTab.clickOnTab()
+        await postMeetingPage.tabs.transcriptTab.tabIsActive()
+        await postMeetingPage.tabs.transcriptTab.imageNoTranscriptAvailable.waitFor({state: 'visible'})
+        await postMeetingPage.tabs.tabPanelLocator.screenshot({ path: "No material transcript tab.png" });
+    })
+
+    test('Highlights tab UI : RCV-26741 : NoM', async () => {
+        await postMeetingPage.tabs.highlightsTab.clickOnTab()
+        await postMeetingPage.tabs.highlightsTab.tabIsActive()
+        await postMeetingPage.tabs.highlightsTab.imageNoHighlightsAvailable.waitFor({state: 'visible'})
+        await postMeetingPage.tabs.tabPanelLocator.screenshot({ path: "No material highlights tab.png" });
     })
 
     test('Add brief summary and keywords functionality : RCV-26955 : NoM', async () => {
@@ -56,7 +70,7 @@ test.describe('Demo server', async () => {
         await postMeetingPage.modal.textAreaInput(`${randomstring.generate(1)}`, 'Enter', 1)
         await postMeetingPage.modal.textAreaInput('', 'Enter', 4)
         await postMeetingPage.modal.isHasScroll()
-        await postMeetingPage.modal.isCorrectMaxHeight(586)
+        await postMeetingPage.modal.isCorrectMaxHeight(584)
         await expect(postMeetingPage.modal.letterCounter).toHaveText('6 / 200')
         //Step#4
         await postMeetingPage.modal.textAreaInput("", "Backspace", 5)
@@ -91,6 +105,7 @@ test.describe('Demo server', async () => {
         //Step#14
         let modalBriefSummaryText = await postMeetingPage.modal.textInput.textContent()
         let modalLastKeywordText = await postMeetingPage.modal.getLastKeywordBoxText()
+        await postMeetingPage.modal.cancelButton.click()
         // await postMeetingPage.modal.doneButton.click()
         // await postMeetingPage.modal.modalLocator.waitFor({state:'hidden'})
         // let sectionBriefSummaryText = await postMeetingPage.tabs.summaryTab.briefSummarySection.getInnerText()
@@ -99,7 +114,7 @@ test.describe('Demo server', async () => {
         // await expect(modalLastKeywordText).toEqual(sectionLastKeywordText)
     })
 
-    test.only('Add summary: RCV-26949 : NoM', async () => {
+    test('Add summary: RCV-26949 : NoM', async () => {
         await postMeetingPage.tabs.summaryTab.moMaterialSection.addSummaryButton.openModal()
         //Step#1
         await expect(postMeetingPage.modal.textInput).toHaveAttribute('placeholder', 'Type your summary here...')

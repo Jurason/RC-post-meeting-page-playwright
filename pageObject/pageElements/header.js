@@ -13,7 +13,7 @@ const DELETE_BUTTON_SELECTOR = '[data-at="Recording::Header::Delete"]'
 export class Header {
     constructor(lastLocator, headerSelector) {
         this.headerlocator = lastLocator.locator(headerSelector)
-        this.participantsDropdown = new Dropdown(this.headerlocator, PARTICIPANTS_DROPDOWN_SELECTOR)
+        this.participantsDropdown = new ParticipantsDropdown(this.headerlocator, PARTICIPANTS_DROPDOWN_SELECTOR)
         this.deleteButton = this.headerlocator.locator(DELETE_BUTTON_SELECTOR)
         this.downloadButton = this.headerlocator.locator(DOWNLOAD_BUTTON_SELECTOR)
         this.shareButton = this.headerlocator.locator(SHARE_BUTTON_SELECTOR)
@@ -21,20 +21,21 @@ export class Header {
         this.partsDropdown = this.headerlocator.locator(RECORDING_PARTS_DROPDOWN_SELECTOR)
     }
 }
-class Dropdown {
+class ParticipantsDropdown {
     constructor(lastLocator, dropdownSelector) {
         this.dropdown = lastLocator.locator(dropdownSelector)
+        this.participantsName = this.dropdown.locator(PARTICIPANTS_DROPDOWN_OPTION_SELECTOR)
         // this.dropdownCheck()                                    //не уверен будет ли это работать
     }
     async openDropdown(){
         await this.dropdown.click()
     }
-    // async getParticipantsNumber(){
-    //     return this.dropdown.locator(PARTICIPANTS_COUNTER_SELECTOR).innerText()
-    // }
-    // dropdownCheck(){
-    //     // const participantsNumber = this.getParticipantsNumber()
-    //     const dropdownOptions = this.dropdown.locator(PARTICIPANTS_DROPDOWN_OPTION_SELECTOR).count()
-    //     expect(participantsNumber).toEqual(dropdownOptions)
-    // }
+    async getParticipantsNumber(){
+        return this.dropdown.locator(PARTICIPANTS_COUNTER_SELECTOR).innerText()
+    }
+    async dropdownCheck(){
+        const participantsNumber = this.getParticipantsNumber()
+        const dropdownOptionsCount = this.participantsName.count()
+        expect(participantsNumber).toEqual(dropdownOptionsCount)
+    }
 }

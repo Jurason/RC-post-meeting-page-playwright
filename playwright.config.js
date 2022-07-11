@@ -3,9 +3,12 @@ import { devices } from '@playwright/test';
 
 const config = {
   // testDir: './tests/specs',
-  // testMatch: 'post-meeting-page-full-material.js',
-  testMatch: 'post-meeting-page-NO-material.js',
+  testMatch: 'post-meeting-page-full-material.js',
+  // testMatch: 'post-meeting-page-NO-material.js',
+  // testMatch: 'post-meeting-page-full-material-transitions.js',
+  // testMatch: 'post-meeting-page-full-karaoke-mode.js',
   // testMatch: 'test.example.js',
+  // testMatch: 'test.js',
   timeout: 300 * 1000,
   expect: {
     timeout: 5000
@@ -18,7 +21,7 @@ const config = {
   workers: 1,
   reporter: 'html',
   use: {
-    headless: true,
+    headless: false,
     actionTimeout: 0,
     storageState: './state.json',
     permissions: ['camera', 'microphone'],

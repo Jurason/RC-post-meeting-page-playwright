@@ -5,17 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d55a8382-469e-4cce-8fd3-4dfec3886aa2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/No material post-meeting-page layout.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/No material summary tab.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pageObject/pageElements/header-tabs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pageObject/pageElements/highlights-tab.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pageObject/pageElements/summary-tab.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pageObject/pageElements/transcript-tab.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/specs/post-meeting-page-full-karaoke-mode.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/specs/post-meeting-page-full-material-transitions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Full material post-meeting-page layout.png" beforeDir="false" afterPath="$PROJECT_DIR$/Full material post-meeting-page layout.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Full material summary tab.png" beforeDir="false" afterPath="$PROJECT_DIR$/Full material summary tab.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/No material post-meeting-page layout.png" beforeDir="false" afterPath="$PROJECT_DIR$/No material post-meeting-page layout.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/No material summary tab.png" beforeDir="false" afterPath="$PROJECT_DIR$/No material summary tab.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RCV-26956.png" beforeDir="false" afterPath="$PROJECT_DIR$/RCV-26956.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RCV-26957.png" beforeDir="false" afterPath="$PROJECT_DIR$/RCV-26957.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RCV-27075.png" beforeDir="false" afterPath="$PROJECT_DIR$/RCV-27075.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pageObject/Login.page.js" beforeDir="false" afterPath="$PROJECT_DIR$/pageObject/Login.page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pageObject/PostMeeting.page.js" beforeDir="false" afterPath="$PROJECT_DIR$/pageObject/PostMeeting.page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pageObject/pageElements/edited-sign.js" beforeDir="false" afterPath="$PROJECT_DIR$/pageObject/pageElements/edited-sign.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pageObject/pageElements/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/pageObject/pageElements/header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pageObject/pageElements/modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/pageObject/pageElements/modal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pageObject/pageElements/player.js" beforeDir="false" afterPath="$PROJECT_DIR$/pageObject/pageElements/player.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pageObject/pageElements/tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/pageObject/pageElements/tabs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/playwright.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/playwright.config.js" afterDir="false" />
@@ -23,10 +32,7 @@
       <change beforePath="$PROJECT_DIR$/tests/specs/post-meeting-page-NO-material.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/specs/post-meeting-page-NO-material.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/specs/post-meeting-page-full-material.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/specs/post-meeting-page-full-material.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test.example.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test.example.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/global-setup.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/global-setup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/login-data.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/login-data.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/recording-URL.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/recording-URL.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/text-for-input.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/text-for-input.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +74,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/djon/WebstormProjects/Playwright_test",
+    "last_opened_file_path": "C:/Users/djon/WebstormProjects/Playwright_test/tests/specs",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -82,6 +88,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\djon\WebstormProjects\Playwright_test\tests\specs" />
       <recent name="C:\Users\djon\WebstormProjects\Playwright_test\pageObject" />
       <recent name="C:\Users\djon\WebstormProjects\Playwright_test" />
     </key>
@@ -158,7 +165,7 @@
       <workItem from="1656751554979" duration="28992000" />
       <workItem from="1656874507111" duration="25660000" />
       <workItem from="1656949759461" duration="533000" />
-      <workItem from="1656952702368" duration="64340000" />
+      <workItem from="1656952702368" duration="150999000" />
     </task>
     <servers />
   </component>

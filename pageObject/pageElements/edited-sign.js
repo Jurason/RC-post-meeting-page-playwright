@@ -1,10 +1,11 @@
 
+
 export class EditedSign {
     constructor(lastLocator, elementLocator) {
-        this.editedSign =lastLocator.locator(elementLocator)
+        this.editedSignLocator =lastLocator.locator(elementLocator)
     }
 
     async getText() {
-        return await this.editedSign.innerText()
+        return await this.editedSignLocator.textContent()
     }
 }
