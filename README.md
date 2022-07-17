@@ -1,4 +1,3 @@
-# Playwright_test
 
 My entire project with #Playwright. 
 
