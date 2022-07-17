@@ -3,12 +3,12 @@ import { devices } from '@playwright/test';
 
 const config = {
   // testDir: './tests/specs',
-  testMatch: 'post-meeting-page-full-material.js',
+  // testMatch: 'post-meeting-page-full-material.js',
   // testMatch: 'post-meeting-page-NO-material.js',
   // testMatch: 'post-meeting-page-full-material-transitions.js',
   // testMatch: 'post-meeting-page-full-karaoke-mode.js',
   // testMatch: 'test.example.js',
-  // testMatch: 'simple-API-test.js',
+  testMatch: 'simple-API-test.js',
   timeout: 300 * 1000,
   expect: {
     timeout: 5000

@@ -1,5 +1,5 @@
 import {chromium, expect, request, test} from "@playwright/test";
-import loginData from "../utils/login-data.js";
+import loginData from "../../utils/login-data.js";
 
 const meetingId = '5515f377-acd8-4b53-9ad2-248095d5c3ad!us-13-pdx12@us-13'
 const LOGIN_INFO_REQUEST_URL = 'https://login.ringcentral.com/api/login-info'

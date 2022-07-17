@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d55a8382-469e-4cce-8fd3-4dfec3886aa2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Playwright_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RC-post-meeting-page-playwright.iml" afterDir="false" />
+    <list default="true" id="9af70bcf-d324-4f98-9300-01be611d8740" name="Changes" comment="simple-API-test.js">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,11 +67,11 @@
       <recent name="C:\Users\djon\WebstormProjects\Playwright_test" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\djon\WebstormProjects\RC-post-meeting-page-playwright\tests\specs" />
+      <recent name="C:\Users\djon\WebstormProjects\RC-post-meeting-page-playwright\tests\my-examples" />
       <recent name="C:\Users\djon\WebstormProjects\Playwright_test\utils\screenshots" />
       <recent name="C:\Users\djon\WebstormProjects\Playwright_test\utils" />
       <recent name="C:\Users\djon\WebstormProjects\Playwright_test\pageObject\pageElements" />
-      <recent name="C:\Users\djon\WebstormProjects\Playwright_test\tests\spec" />
-      <recent name="C:\Users\djon\WebstormProjects\Playwright_test\tests" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.simple-API-test.js">
@@ -88,7 +88,7 @@
     <configuration name="modal.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/pageObject/pageElements/modal.js" working-dir="$PROJECT_DIR$/pageObject/pageElements">
       <method v="2" />
     </configuration>
-    <configuration name="simple-API-test.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/tests/simple-API-test.js" working-dir="$PROJECT_DIR$/tests">
+    <configuration name="simple-API-test.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/tests/specs/simple-API-test.js" working-dir="$PROJECT_DIR$/tests">
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -176,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658046899783</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="simple-API-test.js">
+      <created>1658069331555</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1658069331555</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
