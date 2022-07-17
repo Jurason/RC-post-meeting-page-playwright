@@ -1,8 +1,6 @@
 import {TranscriptTab} from "../pageElements/transcript-tab.js";
 import {HighlightsTab} from "../pageElements/highlights-tab.js";
-import {HeaderTab} from "../pageElements/header-tabs.js";
-import {KeywordSection, NoMaterialSummaryTabSection, SummaryTab, SummaryTabSection} from "./summary-tab.js";
-
+import {SummaryTab} from "./summary-tab.js";
 
 const SUMMARY_TAB_BUTTON_SELECTOR = ':has-text("Summary")'
 const TRANSCRIPT_TAB_BUTTON_SELECTOR = ':has-text("Transcript")'

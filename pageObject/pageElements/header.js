@@ -4,7 +4,9 @@ const BACK_BUTTON_SELECTOR = '.new-post-meeting-page__back'
 const MEETING_INFO_SELECTOR = '.new-post-meeting-page__meeting-info'
 const PARTICIPANTS_DROPDOWN_SELECTOR = '.dropdown-menu'
 const PARTICIPANTS_COUNTER_SELECTOR = '.participants-button__counter'
+const DROPDOWN_LIST_SELECTOR = '.participants-button__list'
 const PARTICIPANTS_DROPDOWN_OPTION_SELECTOR = '.dropdown-menu__option-item'
+const PARTICIPANTS_DROPDOWN_NAMES_SELECTOR = '.participants-button__list-item-name'
 const RECORDING_PARTS_DROPDOWN_SELECTOR = ''
 const SHARE_BUTTON_SELECTOR = '[data-at="Recording::Header::Share"]'
 const DOWNLOAD_BUTTON_SELECTOR = '[data-at="Recording::Header::Download"]'
@@ -23,19 +25,20 @@ export class Header {
 }
 class ParticipantsDropdown {
     constructor(lastLocator, dropdownSelector) {
-        this.dropdown = lastLocator.locator(dropdownSelector)
-        this.participantsName = this.dropdown.locator(PARTICIPANTS_DROPDOWN_OPTION_SELECTOR)
+        this.dropdownLocator = lastLocator.locator(dropdownSelector)
+        this.dropdownList = this.dropdownLocator.locator(DROPDOWN_LIST_SELECTOR)
+        this.participantName = this.dropdownList.locator(PARTICIPANTS_DROPDOWN_NAMES_SELECTOR)
         // this.dropdownCheck()                                    //не уверен будет ли это работать
     }
-    async openDropdown(){
-        await this.dropdown.click()
+    async dropdownClick(){
+        await this.dropdownLocator.click()
     }
     async getParticipantsNumber(){
-        return this.dropdown.locator(PARTICIPANTS_COUNTER_SELECTOR).innerText()
+        return this.dropdownLocator.locator(PARTICIPANTS_COUNTER_SELECTOR).innerText()
     }
-    async dropdownCheck(){
-        const participantsNumber = this.getParticipantsNumber()
-        const dropdownOptionsCount = this.participantsName.count()
-        expect(participantsNumber).toEqual(dropdownOptionsCount)
-    }
+    // async dropdownCheck(){
+    //     const participantsNumber = this.getParticipantsNumber()
+    //     const dropdownOptionsCount = this.participantsName.count()
+    //     expect(participantsNumber).toEqual(dropdownOptionsCount)
+    // }
 }

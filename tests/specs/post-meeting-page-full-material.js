@@ -5,6 +5,8 @@ import URL from "../../utils/recording-URL.js";
 import textForInput from "../../utils/text-for-input.js";
 import randomstring from "randomstring";
 
+const PAGE_INFO_URL = `https://api-meet.ringcentral.com/rcvideo/v1/history/meetings/${URL.fullMaterialRecordingDemo.split('/').slice(-1)}`
+let pageInfo;
 
 test.describe('Full material functional tests. Demo server', async () => {
 
@@ -14,12 +16,14 @@ test.describe('Full material functional tests. Demo server', async () => {
     test.beforeAll(async ({browser}) => {
         const context = await browser.newContext()
         page = await context.newPage()
+        await page.on('response', async response => {
+            if (response.url() === PAGE_INFO_URL) pageInfo = await response.json()
+        })
         await page.goto(URL.fullMaterialRecordingDemo)
         await page.locator('button', {hasText: "Continue"}).click()
         await page.locator("button.btn.btn-primary").click()
         await page.locator("button.btn.btn-primary").click()
-    })
-
+})
     test.beforeEach(async () => {
         postMeetingPage = await new PostMeetingPage(page)
     })
@@ -157,7 +161,7 @@ test.describe('Full material functional tests. Demo server', async () => {
         await page.screenshot({ path: "RCV-26956.png" });
     })
 
-    test('Edit keywords functionality : RCV-26957 : FM', async () => {                      //TBD
+    test('Edit keywords functionality : RCV-26957 : FM', async () => {
         const initialLastKeywordText = await postMeetingPage.tabs.summaryTab.keywordSection.getLastKeywordBoxText()
         const countOfKeywords = await postMeetingPage.tabs.summaryTab.keywordSection.getCountOfKeywords()
         //Step#1
@@ -200,23 +204,48 @@ test.describe('Full material functional tests. Demo server', async () => {
 
     test.skip('Transcript list element functionality : RCV-26801 : FM', async () => {
         await postMeetingPage.tabs.transcriptTab.clickOnTab()
-        await postMeetingPage.tabs.transcriptTab.tabIsActive()
-        const dropdownParticipantsNames = await postMeetingPage.header.participantsDropdown.participantsName.allTextContents()
         const phraseParticipantName = await postMeetingPage.tabs.transcriptTab.getParticipantName(0)
-        console.log(dropdownParticipantsNames);
-        console.log(phraseParticipantName);
-        await expect(dropdownParticipantsNames.includes(phraseParticipantName)).toBeTruthy()
-            //*****************************TBD
+        const dropDownParticipants = await pageInfo.participants.map(x => x = x.displayName)
+        await expect(await dropDownParticipants.findIndex(name => name === phraseParticipantName) !== -1).toBeTruthy()
+        // await postMeetingPage.player.footer.playButton.hover()
+        // await postMeetingPage.player.footer.playButton.click()
+        // await postMeetingPage.player.footer.pauseButton.waitFor({state: "visible"})
+        // await postMeetingPage.player.footer.pauseButton.hover()
+        // await postMeetingPage.player.footer.pauseButton.click()
+        let randomIndex = await postMeetingPage.tabs.transcriptTab.randomIndex()
+        while(await postMeetingPage.tabs.transcriptTab.isAddedToHighlights(randomIndex)){
+            randomIndex = await postMeetingPage.tabs.transcriptTab.randomIndex()
+        }
+        await postMeetingPage.tabs.transcriptTab.clickReplayTranscriptButton(randomIndex)
+        // await postMeetingPage.player.footer.pauseButton.waitFor({state: "visible"})
+        // await postMeetingPage.tabs.highlightsTab.clickOnTab()
+        // await postMeetingPage.tabs.highlightsTab.deleteAllHighlights()          //удалять через API
+        // await postMeetingPage.tabs.transcriptTab.clickOnTab()
+        let phraseContent = await postMeetingPage.tabs.transcriptTab.getPhraseTextContent(randomIndex)
+        await postMeetingPage.tabs.transcriptTab.transcriptPhraseTextContent.nth(randomIndex).click({clickCount:3})
+        await postMeetingPage.tabs.transcriptTab.clickCreateDeleteHighlightButton()
+        await postMeetingPage.tabs.highlightsTab.clickOnTab()
+        console.log('phraseContent:', phraseContent)
+        await page.pause()
+        let highlightsTextContent = await postMeetingPage.tabs.highlightsTab.highlightPhraseTextContent.allTextContents()
+        console.log('highlightsTextContent:', highlightsTextContent)
+        await expect.soft(await highlightsTextContent.findIndex(phrase => phrase.includes(phraseContent)) !== -1).toBeTruthy()
+
+        await postMeetingPage.tabs.transcriptTab.clickOnTab()
+        await expect.soft(await postMeetingPage.tabs.transcriptTab.isAddedToHighlights(randomIndex)).toEqual(true)
+        await postMeetingPage.tabs.transcriptTab.transcriptPhraseTextContent.nth(randomIndex).click({clickCount:3})
+        await postMeetingPage.tabs.transcriptTab.clickCreateDeleteHighlightButton()
+
+        //copy functionality
         //select part of the phrase, using mouse
     })  //TBD
 
     test('Transcript search functionality : RCV-26748 : FM', async () => {
         await postMeetingPage.tabs.transcriptTab.clickOnTab()
-        await postMeetingPage.tabs.transcriptTab.tabIsActive()
-        await postMeetingPage.tabs.transcriptTab.searchInput.fill("")
-        await expect(postMeetingPage.tabs.transcriptTab.searchInput).toHaveAttribute('placeholder', 'Search')
-        await postMeetingPage.tabs.transcriptTab.searchInput.type("Yes")
-        await postMeetingPage.tabs.transcriptTab.buttonClearSearchInput.waitFor({state: "visible"})
+        await postMeetingPage.tabs.transcriptTab.searchDownloadContainer.searchInput.fill("")
+        await expect(postMeetingPage.tabs.transcriptTab.searchDownloadContainer.searchInput).toHaveAttribute('placeholder', 'Search')
+        await postMeetingPage.tabs.transcriptTab.searchDownloadContainer.searchInput.fill("Yes")
+        await postMeetingPage.tabs.transcriptTab.searchDownloadContainer.buttonClearSearchInput.waitFor({state: "visible"})
         await postMeetingPage.tabs.transcriptTab.navigationToggle.toggleLocator.waitFor({state: 'visible'})
         await postMeetingPage.tabs.transcriptTab.highlightedPhrase.first().waitFor({state: "visible"})
         await expect(postMeetingPage.tabs.transcriptTab.navigationToggle.upButton).toBeEnabled()
@@ -224,7 +253,7 @@ test.describe('Full material functional tests. Demo server', async () => {
         let maxToggleCounter = await postMeetingPage.tabs.transcriptTab.navigationToggle.getMaxToggleCounter()
         let currentToggleCounter = await postMeetingPage.tabs.transcriptTab.navigationToggle.getCurrentToggleCounter()
         for (let i = 0; i < maxToggleCounter; i++) {
-            await postMeetingPage.tabs.transcriptTab.searchInput.press('Enter')
+            await postMeetingPage.tabs.transcriptTab.searchDownloadContainer.searchInput.press('Enter')
             await postMeetingPage.tabs.transcriptTab.highlightedPhrase.first().waitFor({state: "visible"})
             currentToggleCounter = await postMeetingPage.tabs.transcriptTab.navigationToggle.getCurrentToggleCounter()
             if(i === maxToggleCounter -1) {await expect(currentToggleCounter).toEqual(1)}
@@ -237,17 +266,16 @@ test.describe('Full material functional tests. Demo server', async () => {
         await postMeetingPage.tabs.transcriptTab.navigationToggle.upButton.click()
         currentToggleCounter = await postMeetingPage.tabs.transcriptTab.navigationToggle.getCurrentToggleCounter()
         await expect(currentToggleCounter).toEqual(maxToggleCounter)
-        await postMeetingPage.tabs.transcriptTab.buttonClearSearchInput.click()
-        await postMeetingPage.tabs.transcriptTab.searchInput.press('Backspace')       //two symbols
+        await postMeetingPage.tabs.transcriptTab.searchDownloadContainer.buttonClearSearchInput.click()
+        await postMeetingPage.tabs.transcriptTab.searchDownloadContainer.searchInput.press('Backspace')       //two symbols
         await postMeetingPage.tabs.transcriptTab.navigationToggle.toggleLocator.waitFor({state: 'hidden'})
-        await postMeetingPage.tabs.transcriptTab.searchInput.type('yyy')
+        await postMeetingPage.tabs.transcriptTab.searchDownloadContainer.searchInput.fill('yyy')
         let currentToggleText = await postMeetingPage.tabs.transcriptTab.navigationToggle.getToggleText()
         await expect(currentToggleText).toEqual('No results')
     })
 
     test('Search by keywords in transcript : RCV-20925 : FM', async () => {
         await postMeetingPage.tabs.transcriptTab.clickOnTab()
-        await postMeetingPage.tabs.transcriptTab.tabIsActive()
         //"Expand" button functionality
         let keywordCountBefore = await postMeetingPage.tabs.transcriptTab.getCountOfKeywords()
         let keywordContainerHeightBefore = await postMeetingPage.tabs.transcriptTab.keywordsContainer.evaluate(node => node.clientHeight)
@@ -266,17 +294,17 @@ test.describe('Full material functional tests. Demo server', async () => {
                 await postMeetingPage.tabs.transcriptTab.navigationToggle.toggleLocator.waitFor({state: 'visible'})
                 currentToggleText = await postMeetingPage.tabs.transcriptTab.navigationToggle.getToggleText()
             } while (currentToggleText === 'No results')
-            await postMeetingPage.tabs.transcriptTab.buttonClearSearchInput.waitFor({state: "visible"}) //wait for search input load
+            await postMeetingPage.tabs.transcriptTab.searchDownloadContainer.buttonClearSearchInput.waitFor({state: "visible"}) //wait for search input load
             await postMeetingPage.tabs.transcriptTab.highlightedPhrase.first().waitFor({state: "visible"})
             await expect(postMeetingPage.tabs.transcriptTab.navigationToggle.upButton).toBeEnabled()
             await expect(postMeetingPage.tabs.transcriptTab.navigationToggle.downButton).toBeEnabled()
-            currentSearchInputValue = await postMeetingPage.tabs.transcriptTab.getSearchInputValue()
+            currentSearchInputValue = await postMeetingPage.tabs.transcriptTab.searchDownloadContainer.getSearchInputValue()
             await expect(currentSearchInputValue).toEqual(keywordText)
             highlightedPhrase = await postMeetingPage.tabs.transcriptTab.getHighlightedPhrase()
             await expect(highlightedPhrase.toLowerCase()).toEqual(currentSearchInputValue)
         }
-        await postMeetingPage.tabs.transcriptTab.buttonClearSearchInput.click()
-        await expect(postMeetingPage.tabs.transcriptTab.searchInput).toBeEmpty()
+        await postMeetingPage.tabs.transcriptTab.searchDownloadContainer.buttonClearSearchInput.click()
+        await expect(postMeetingPage.tabs.transcriptTab.searchDownloadContainer.searchInput).toBeEmpty()
     })
 })
 

@@ -1,6 +1,7 @@
 import {expect} from "@playwright/test";
 
 const TAB_CONTAINER_SELECTOR = '.Tabs__item'
+
 //фактически HeaderTabs класс нужен только для использования функции tabIsActive
 //То есть HeaderTabs класс нужен для всех таб, поэтому мы его выносим на уровень выше
 //по сути не является родительским классом для класса SummaryTab, это просто указатель на хэдэр

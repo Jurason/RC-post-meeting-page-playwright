@@ -22,13 +22,15 @@ class PlayerHeader {
 }
 
 const PLAYER_PROGRESS_SELECTOR = '.PlayerProgress'
-const PLAY_BUTTON_SELECTOR = '.PlayerButton >> nth=0'
+const PLAY_BUTTON_SELECTOR = '.PlayerButton :has(" .svg-play")'
+const PAUSE_BUTTON_SELECTOR = '.PlayerButton :has(" .svg-pause")'
 
 
 class PlayerFooter {
     constructor(lastLocator, footerSelector) {
         this.playerFooterLocator = lastLocator.locator(footerSelector)
-        this.playButton = new Button(this.playerFooterLocator, PLAY_BUTTON_SELECTOR)
+        this.playButton = this.playerFooterLocator.locator(PLAY_BUTTON_SELECTOR)
+        this.pauseButton = this.playerFooterLocator.locator(PAUSE_BUTTON_SELECTOR)
 
     }
 }

@@ -8,12 +8,12 @@ const config = {
   // testMatch: 'post-meeting-page-full-material-transitions.js',
   // testMatch: 'post-meeting-page-full-karaoke-mode.js',
   // testMatch: 'test.example.js',
-  // testMatch: 'test.js',
+  // testMatch: 'simple-API-test.js',
   timeout: 300 * 1000,
   expect: {
     timeout: 5000
   },
-  // globalSetup: "./utils/global-setup",
+  globalSetup: "./utils/global-setup",
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,

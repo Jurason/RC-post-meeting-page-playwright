@@ -1,7 +1,7 @@
 import {expect} from "@playwright/test";
 import {EditedSign} from "./edited-sign.js";
 
-const CANCEL_BUTTON_SELECTOR = '.Button.Button--text-only'
+const CANCEL_BUTTON_SELECTOR = 'button.Button--text-only'
 const DONE_BUTTON_SELECTOR = '.Button.Button--contained'
 const EDITED_SIGN_SELECTOR = '.edit-sign'
 const TEXT_INPUT_SELECTOR = 'textarea'
@@ -125,6 +125,17 @@ export class Modal {
     //     await this.page.mouse.up()
     // }
 
+}
+
+const MODAL_SELECTOR = '#modal'
+const DELETE_BUTTON_SELECTOR = 'button.Button--contained.danger'
+
+export class DeleteConfirmationModal {
+    constructor(modalSelector) {
+
+        this.cancelButton = modalSelector.locator(CANCEL_BUTTON_SELECTOR)
+        this.deleteButton = modalSelector.locator(DELETE_BUTTON_SELECTOR)
+    }
 }
 
 // const KEYWORD_BOX_DELETE_BUTTON = 'button'

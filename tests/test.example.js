@@ -34,17 +34,17 @@ test.describe('Authorization', () => {
         //         })
         // console.log(await loginInfoResponse.json());
 
-        const consentRequest = await request.post('https://login.ringcentral.com/api/generate-code', {
-            headers: {
-                'CSRFTOKEN': 'Z4cEHOT4GV6dBk2Fh4E90AhmsHyfajhi',
-                'Cookie': 'CSRFTOKEN=Z4cEHOT4GV6dBk2Fh4E90AhmsHyfajhi'
-            },
-            data: {
-                "clientId": loginData.CLIENTID,
-                "appUrlScheme": loginData.URL_JOIN_DEMO
-            }
-        })
-        console.log(await consentRequest.json());
+        // const consentRequest = await request.post('https://login.ringcentral.com/api/generate-code', {
+        //     headers: {
+        //         'CSRFTOKEN': 'Z4cEHOT4GV6dBk2Fh4E90AhmsHyfajhi',
+        //         'Cookie': 'CSRFTOKEN=Z4cEHOT4GV6dBk2Fh4E90AhmsHyfajhi'
+        //     },
+        //     data: {
+        //         "clientId": loginData.CLIENTID,
+        //         "appUrlScheme": loginData.URL_JOIN_DEMO
+        //     }
+        // })
+        // console.log(await consentRequest.json());
         //
         // const consentRequest = await request.post('https://login.ringcentral.com/api/generate-code', {
         //     headers: {

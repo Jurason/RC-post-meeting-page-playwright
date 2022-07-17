@@ -1,5 +1,5 @@
 import { expect } from "@playwright/test";
-import {Modal} from "./pageElements/modal.js";
+import {DeleteConfirmationModal, Modal} from "./pageElements/modal.js";
 import {Header} from "./pageElements/header.js";
 import {TabPanel} from "./pageElements/tabs.js";
 import {Player} from "./pageElements/player.js";
@@ -14,8 +14,9 @@ export class PostMeetingPage {
         this.page = page;
         this.tabs = new TabPanel(this.page, TAB_PANEL_SELECTOR)
         this.header = new Header(this.page, HEADER_SELECTOR)
-        this.modal = new Modal(this.page, MODAL_SELECTOR)
         this.player = new Player(this.page, PLAYER_SELECTOR);
+        this.modal = new Modal(this.page, MODAL_SELECTOR)
+        // this.deleteConfirmationModal = new DeleteConfirmationModal(this.page, MODAL_SELECTOR)
     }
 }
 

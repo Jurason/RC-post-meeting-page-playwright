@@ -27,12 +27,14 @@ test.describe('Karaoke mode tests. Demo server', async () => {
         await postMeetingPage.player.footer.playButton.buttonLocator.click()
         for(let i = 0; i < 3; i++)                                                 //test first 3 words in a row
             await postMeetingPage.tabs.transcriptTab.karaokeModeFunction(i, 0)
+        //Playback stopped
         await postMeetingPage.player.footer.playButton.buttonLocator.click()
-        const randomIndex = await postMeetingPage.tabs.transcriptTab.indexRandomReplayTranscriptButton()
+        const randomIndex = await postMeetingPage.tabs.transcriptTab.randomIndex()
+        //add hover for button display
         await postMeetingPage.tabs.transcriptTab.clickReplayTranscriptButton(randomIndex)
-        //PLayer start
+        //Playback started
         for(let i = 0; i < 3; i++)                                                 //test first 3 words in a row
-            await postMeetingPage.tabs.transcriptTab.karaokeModeFunction(i, randomIndex)
+        await postMeetingPage.tabs.transcriptTab.karaokeModeFunction(i, randomIndex)
         await postMeetingPage.player.footer.playButton.buttonLocator.click()
-    })
+    })      //TBD
 })

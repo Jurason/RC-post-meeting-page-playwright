@@ -5,34 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d55a8382-469e-4cce-8fd3-4dfec3886aa2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pageObject/pageElements/header-tabs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pageObject/pageElements/highlights-tab.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pageObject/pageElements/summary-tab.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pageObject/pageElements/transcript-tab.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/specs/post-meeting-page-full-karaoke-mode.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/specs/post-meeting-page-full-material-transitions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Full material post-meeting-page layout.png" beforeDir="false" afterPath="$PROJECT_DIR$/Full material post-meeting-page layout.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Full material summary tab.png" beforeDir="false" afterPath="$PROJECT_DIR$/Full material summary tab.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/No material post-meeting-page layout.png" beforeDir="false" afterPath="$PROJECT_DIR$/No material post-meeting-page layout.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/No material summary tab.png" beforeDir="false" afterPath="$PROJECT_DIR$/No material summary tab.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RCV-26956.png" beforeDir="false" afterPath="$PROJECT_DIR$/RCV-26956.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RCV-26957.png" beforeDir="false" afterPath="$PROJECT_DIR$/RCV-26957.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RCV-27075.png" beforeDir="false" afterPath="$PROJECT_DIR$/RCV-27075.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pageObject/PostMeeting.page.js" beforeDir="false" afterPath="$PROJECT_DIR$/pageObject/PostMeeting.page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pageObject/pageElements/edited-sign.js" beforeDir="false" afterPath="$PROJECT_DIR$/pageObject/pageElements/edited-sign.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pageObject/pageElements/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/pageObject/pageElements/header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pageObject/pageElements/player.js" beforeDir="false" afterPath="$PROJECT_DIR$/pageObject/pageElements/player.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pageObject/pageElements/tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/pageObject/pageElements/tabs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playwright.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/playwright.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/state.json" beforeDir="false" afterPath="$PROJECT_DIR$/state.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/specs/post-meeting-page-NO-material.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/specs/post-meeting-page-NO-material.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/specs/post-meeting-page-full-material.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/specs/post-meeting-page-full-material.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test.example.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test.example.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/recording-URL.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/recording-URL.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Playwright_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RC-post-meeting-page-playwright.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,40 +40,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/djon/WebstormProjects/Playwright_test/tests/specs",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs.jest.jest_package": "",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.editor",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2022.1\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/djon/WebstormProjects/JavaScript_fullCourse&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs.jest.jest_package&quot;: &quot;&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2022.1\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\djon\WebstormProjects\Playwright_test\pageObject\pageElements" />
       <recent name="C:\Users\djon\WebstormProjects\Playwright_test\tests\specs" />
       <recent name="C:\Users\djon\WebstormProjects\Playwright_test\pageObject" />
       <recent name="C:\Users\djon\WebstormProjects\Playwright_test" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\djon\WebstormProjects\Playwright_test\utils\screenshots" />
       <recent name="C:\Users\djon\WebstormProjects\Playwright_test\utils" />
       <recent name="C:\Users\djon\WebstormProjects\Playwright_test\pageObject\pageElements" />
       <recent name="C:\Users\djon\WebstormProjects\Playwright_test\tests\spec" />
       <recent name="C:\Users\djon\WebstormProjects\Playwright_test\tests" />
-      <recent name="C:\Users\djon\WebstormProjects\Playwright_test\pageObject\test" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.modal.js">
+  <component name="RunManager" selected="Node.js.simple-API-test.js">
     <configuration name="generated.spec.ts" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -114,13 +88,16 @@
     <configuration name="modal.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/pageObject/pageElements/modal.js" working-dir="$PROJECT_DIR$/pageObject/pageElements">
       <method v="2" />
     </configuration>
+    <configuration name="simple-API-test.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/tests/simple-API-test.js" working-dir="$PROJECT_DIR$/tests">
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.simple-API-test.js" />
         <item itemvalue="Node.js.modal.js" />
         <item itemvalue="Jest.generated.spec.ts" />
-        <item itemvalue="Jest.generated.spec.ts" />
-        <item itemvalue="Jest.generated.spec.ts" />
-        <item itemvalue="Jest.generated.spec.ts" />
+        <item itemvalue="Node.js.simple-API-test.js" />
+        <item itemvalue="Node.js.modal.js" />
       </list>
     </recent_temporary>
   </component>
@@ -165,12 +142,51 @@
       <workItem from="1656751554979" duration="28992000" />
       <workItem from="1656874507111" duration="25660000" />
       <workItem from="1656949759461" duration="533000" />
-      <workItem from="1656952702368" duration="150999000" />
+      <workItem from="1656952702368" duration="185509000" />
+      <workItem from="1657784491918" duration="10030000" />
+      <workItem from="1657825778454" duration="8570000" />
+      <workItem from="1657865787929" duration="41767000" />
+      <workItem from="1657975703754" duration="45410000" />
     </task>
+    <task id="LOCAL-00001" summary="described transcript-tab">
+      <created>1657533269698</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1657533269698</updated>
+    </task>
+    <task id="LOCAL-00002" summary="simple-API-test.js">
+      <created>1658039620777</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1658039620777</updated>
+    </task>
+    <task id="LOCAL-00003" summary="simple-API-test.js">
+      <created>1658046868653</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1658046868653</updated>
+    </task>
+    <task id="LOCAL-00004" summary="simple-API-test.js">
+      <created>1658046899783</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1658046899783</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pageObject/Login.page.js" />
+        <option value="$PROJECT_DIR$/pageObject/PostMeeting.page.js" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -185,19 +201,21 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="described transcript-tab" />
+    <MESSAGE value="simple-API-test.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="simple-API-test.js" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/pageObject/pageElements/header.js</url>
-          <line>7</line>
+          <line>9</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/pageObject/pageElements/modal.js</url>
           <line>22</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>

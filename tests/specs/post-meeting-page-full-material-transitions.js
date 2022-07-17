@@ -24,19 +24,19 @@ test.describe('Full material functional transitions tests. Demo server', async (
         await postMeetingPage.tabs.summaryTab.keywordSection.clickRandomKeyword()
         await postMeetingPage.tabs.transcriptTab.tabIsActive()
         await postMeetingPage.tabs.transcriptTab.navigationToggle.toggleLocator.waitFor({state: 'visible'})
-        await postMeetingPage.tabs.transcriptTab.buttonClearSearchInput.waitFor({state: "visible"})
+        await postMeetingPage.tabs.transcriptTab.searchDownloadContainer.buttonClearSearchInput.waitFor({state: "visible"})
         let currentToggleText = await postMeetingPage.tabs.transcriptTab.navigationToggle.getToggleText()
         while(currentToggleText === 'No results'){
             await postMeetingPage.tabs.summaryTab.clickOnTab()
             await postMeetingPage.tabs.summaryTab.keywordSection.clickRandomKeyword()
             await postMeetingPage.tabs.transcriptTab.tabIsActive()
             await postMeetingPage.tabs.transcriptTab.navigationToggle.toggleLocator.waitFor({state: 'visible'})
-            await postMeetingPage.tabs.transcriptTab.buttonClearSearchInput.waitFor({state: "visible"})
+            await postMeetingPage.tabs.transcriptTab.searchDownloadContainer.buttonClearSearchInput.waitFor({state: "visible"})
             currentToggleText = await postMeetingPage.tabs.transcriptTab.navigationToggle.getToggleText()
         }
-        let currentSearchInputValue = await postMeetingPage.tabs.transcriptTab.getSearchInputValue()
+        let currentSearchInputValue = await postMeetingPage.tabs.transcriptTab.searchDownloadContainer.getSearchInputValue()
         let highlightedPhrase = await postMeetingPage.tabs.transcriptTab.getHighlightedPhrase()
         await expect(highlightedPhrase.toLowerCase()).toEqual(currentSearchInputValue)
-    })  //TBD
+    })
 
 })
