@@ -13,7 +13,9 @@
     "playwright-core": "^1.23.2",
     "randomstring": "^1.2.2"
   },
-  "scripts": {"test":  "npx playwright test"},
+  "scripts": {
+    "test": "npx playwright test"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Jurason/Playwright_test.git"
