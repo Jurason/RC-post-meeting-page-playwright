@@ -103,10 +103,10 @@ dist
 # TernJS port file
 .tern-port
 =======
-/test-results/
+test-results/
 /playwright-report/
 /playwright/.cache/
 /tests/my-examples/
 /utils/test/
-/.idea/
+.idea/
 state.json
