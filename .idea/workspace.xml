@@ -4,7 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9af70bcf-d324-4f98-9300-01be611d8740" name="Changes" comment="" />
+    <list default="true" id="9af70bcf-d324-4f98-9300-01be611d8740" name="Changes" comment="change links path">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pageObject/Login.page.js" beforeDir="false" afterPath="$PROJECT_DIR$/page-object/login-page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pageObject/PostMeeting.page.js" beforeDir="false" afterPath="$PROJECT_DIR$/page-object/post-meeting-page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pageObject/pageElements/edited-sign.js" beforeDir="false" afterPath="$PROJECT_DIR$/page-object/page-elements/edited-sign.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pageObject/pageElements/header-tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/page-object/page-elements/header-tabs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pageObject/pageElements/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/page-object/page-elements/header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pageObject/pageElements/highlights-tab.js" beforeDir="false" afterPath="$PROJECT_DIR$/page-object/page-elements/highlights-tab.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pageObject/pageElements/modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/page-object/page-elements/modal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pageObject/pageElements/player.js" beforeDir="false" afterPath="$PROJECT_DIR$/page-object/page-elements/player.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pageObject/pageElements/search-download-container.js" beforeDir="false" afterPath="$PROJECT_DIR$/page-object/page-elements/search-download-container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pageObject/pageElements/summary-tab.js" beforeDir="false" afterPath="$PROJECT_DIR$/page-object/page-elements/summary-tab.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pageObject/pageElements/tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/page-object/page-elements/tabs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pageObject/pageElements/transcript-tab.js" beforeDir="false" afterPath="$PROJECT_DIR$/page-object/page-elements/transcript-tab.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/my-examples/test.example.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/my-examples/test.example.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/specs/post-meeting-page-NO-material.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/specs/post-meeting-page-NO-material.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/specs/post-meeting-page-full-karaoke-mode.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/specs/post-meeting-page-full-karaoke-mode.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/specs/post-meeting-page-full-material-transitions.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/specs/post-meeting-page-full-material-transitions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/specs/post-meeting-page-full-material.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/specs/post-meeting-page-full-material.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/global-setup.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/global-setup.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -110,6 +130,14 @@
       <workItem from="1655221742600" duration="232000" />
       <workItem from="1655221977846" duration="379000" />
     </task>
+    <task id="LOCAL-00001" summary="change .gitignore">
+      <created>1658073516658</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1658073516658</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,6 +156,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="change .gitignore" />
+    <MESSAGE value="change links path" />
+    <option name="LAST_COMMIT_MESSAGE" value="change links path" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>

@@ -1,6 +1,6 @@
 import {chromium, request, test} from "@playwright/test";
 import loginData from "utils/login-data.js";
-import {LoginPage} from "pageObject/Login.page.js";
+import {LoginPage} from "page-object/login-page.js";
 import fs from 'fs'
 
 let storageState = await JSON.parse(fs.readFileSync('./state.json'));

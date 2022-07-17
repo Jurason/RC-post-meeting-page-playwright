@@ -1,4 +1,4 @@
-import {Button, DownloadButton} from "../pageElements/tabs.js";
+import {Button, DownloadButton} from "./tabs.js";
 import {HeaderTab} from "./header-tabs.js";
 import {expect} from "@playwright/test";
 import {SearchDownloadContainer} from "./search-download-container.js";

@@ -1,8 +1,8 @@
 import { expect } from "@playwright/test";
-import {DeleteConfirmationModal, Modal} from "./pageElements/modal.js";
-import {Header} from "./pageElements/header.js";
-import {TabPanel} from "./pageElements/tabs.js";
-import {Player} from "./pageElements/player.js";
+import {DeleteConfirmationModal, Modal} from "./page-elements/modal.js";
+import {Header} from "./page-elements/header.js";
+import {TabPanel} from "./page-elements/tabs.js";
+import {Player} from "./page-elements/player.js";
 
 const TAB_PANEL_SELECTOR = '.post-meeting-tabs'
 const HEADER_SELECTOR = '.new-post-meeting-page__header'

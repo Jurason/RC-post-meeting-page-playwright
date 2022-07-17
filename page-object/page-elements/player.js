@@ -1,5 +1,5 @@
 import {expect} from "@playwright/test";
-import {Button} from "../pageElements/tabs.js";
+import {Button} from "./tabs.js";
 
 const PLAYER_HEADER = '.PlayerHeader'
 const PLAYER_FOOTER = '.PlayerFooter'

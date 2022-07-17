@@ -1,5 +1,5 @@
-import {TranscriptTab} from "../pageElements/transcript-tab.js";
-import {HighlightsTab} from "../pageElements/highlights-tab.js";
+import {TranscriptTab} from "./transcript-tab.js";
+import {HighlightsTab} from "./highlights-tab.js";
 import {SummaryTab} from "./summary-tab.js";
 
 const SUMMARY_TAB_BUTTON_SELECTOR = ':has-text("Summary")'

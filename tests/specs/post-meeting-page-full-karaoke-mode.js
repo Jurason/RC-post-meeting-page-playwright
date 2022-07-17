@@ -1,5 +1,5 @@
 import { test } from "@playwright/test";
-import {PostMeetingPage} from "../../pageObject/PostMeeting.page.js";
+import {PostMeetingPage} from "page-object/post-meeting-page.js";
 
 import URL from "../../utils/recording-URL.js";
 
