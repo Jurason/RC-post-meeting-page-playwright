@@ -108,3 +108,5 @@ dist
 /playwright/.cache/
 /tests/my-examples/
 /utils/test/
+/.idea/
+state.json
