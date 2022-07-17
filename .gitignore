@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Logs
 logs
 *.log
@@ -104,8 +103,8 @@ dist
 # TernJS port file
 .tern-port
 =======
-node_modules/
 /test-results/
 /playwright-report/
 /playwright/.cache/
->>>>>>> 338d9cc (Preconfiguration)
+/tests/my-examples/
+/utils/test/

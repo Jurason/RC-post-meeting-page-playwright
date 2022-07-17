@@ -1,0 +1,55 @@
+{
+  "cookies": [
+    {
+      "name": "CLW_VERSION",
+      "value": "22.2.3",
+      "domain": "login.ringcentral.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "PLA_SESSION",
+      "value": "gen-4788486861448426191",
+      "domain": "login.ringcentral.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "RCAuthSession",
+      "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ7XCJybFwiOmZhbHNlLFwicnRmXCI6ZmFsc2UsXCJ1blwiOlwidmFsa2VhcmVAaW5ib3gucnVcIixcImFpZFwiOlwiMjk0NjMzNzAyMFwiLFwiZWlkXCI6XCIzMjIxMjkzMDIwXCIsXCJiaWRcIjpcIjEyMTBcIixcImN0XCI6XCJQYXNzd29yZFwiLFwiYXRcIjpcImV5SnJhV1FpT2lJNE56WXlaalU1T0dRd05UazBOR1JpT0RaaVpqVmpZVGszT0RBME56WXdPQ0lzSW5SNWNDSTZJa3BYVkNJc0ltRnNaeUk2SWxKVE1qVTJJbjAuZXlKemRXSWlPaUl6TWpJeE1qa3pNREl3SWl3aWFYTnpJam9pYUhSMGNITTZYQzljTDNCc1lYUm1iM0p0TG5KcGJtZGpaVzUwY21Gc0xtTnZiU0lzSW1sa2JHVmZkR2x0WlNJNk1UWTFPREE1T1RJeU1Td2lZbkpoYm1SZmFXUWlPaUl4TWpFd0lpd2ljMmxrSWpvaU5qaG1aV000Tm1ZdE9EVXpNaTAwTldFd0xXSTFZVEF0TVRKaE1qSTNOMlpqWmpVM0lpd2lZWFZrSWpvaWVWQlNXVmxRVDBsUlVWZDVNMjlDY0ZKalVVbFJRU0lzSW1OeVpXUmxiblJwWVd4ZmRIbHdaU0k2SWxCaGMzTjNiM0prSWl3aVlXTmpiM1Z1ZEY5cFpDSTZJakk1TkRZek16Y3dNakFpTENKaGRYUm9YM1JwYldVaU9qRTJOVGd3TnpBME1qRXNJbWxoZENJNk1UWTFPREEzTURReU1Td2ljMlZzWmw5emFXZHVaV1FpT21aaGJITmxMQ0pxZEdraU9pSTNPRFl3TWpNeE1DMDBPV1k0TFRSbVl6Y3RZVFkyTUMxa01UQTJaRGcxTVdSbFlqWWlmUS5jYTdjNFVjd1JZWDVLMFBLenZlSkc0V21kWFhldWgxWmh1MzJFUGliM05hTHR4UElsblh3cHI5MXM1azR4OXZpV25ZRDZTOHZrOTdTZ3NJNHFRdENkM1hfOGFOVEZzRGZjLXlUNUFFWmdWSGotcGZuZUhCbS1fSGNVTlllTUdLYjR4el9uRFkzUTZqQzlGdXEtRXNXd0Zab1BkeUZUVTN1alhCMl9hdENXdFNyeEZ4X2dkZ2hsZlpuOTdhMzNvenF4aFVld1dGVEpWT1lfTERUZDBidDg2WVFzT2RtWUdHSWpuYWNFT2tjRW1Wb2tHMFdOb2FOQkt0ZElZWTRTWEFLa3ZfajRIU2ladnBXdVczLWhEbVhpRmhzUUkzZzVnNVdzNWlmZFp2SVB4RzdjSHdrV3diOWVacWVndUI0ZHc5U1BaRmM1VHlUd1hZWXc3cjQzeXY3U1FcIixcImxhdFwiOjE2NTgwNzA0MjE1OTAsXCJnYVwiOmZhbHNlLFwiY2VhXCI6dHJ1ZX0ifQ.wE09dvHyEWJgOgeljP61q9C8Z9u79o21WiC2vWxCDb8",
+      "domain": "login.ringcentral.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "RCBRAND",
+      "value": "1210",
+      "domain": "login.ringcentral.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "CSRFTOKEN",
+      "value": "s8c8P7KxYNLEXaiarOjcG3DxdJ3lRdhu",
+      "domain": "login.ringcentral.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": []
+}
