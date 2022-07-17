@@ -1,5 +1,5 @@
 import {chromium, request} from '@playwright/test';
-import {LoginPage} from "page-object/login-page.js";
+import {LoginPage} from "../page-object/login-page.js";
 
 // async function globalSetup(config) {
 //     const { storageState } = config.projects[0].use;
